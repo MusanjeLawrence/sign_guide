@@ -22,14 +22,14 @@ class _LearnState extends State<Learn> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
               Icon(Icons.sort_by_alpha_rounded, size: 50, color: Colors.white,),
-              Text("Alphabets", style: TextStyle(color: Colors.white, fontSize: 30),)
+              Text("Alphabets", style: TextStyle(color: Colors.white, fontSize: 22),)
             ],),
           ), Container( decoration: BoxDecoration(borderRadius: BorderRadius.circular(20),color: Colors.lightBlueAccent),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
               Icon(Icons.numbers_rounded, size: 50, color: Colors.white,),
-              Text("Numbers", style: TextStyle(color: Colors.white, fontSize: 30),)
+              Text("Numbers", style: TextStyle(color: Colors.white, fontSize: 22),)
             ],),
           ),
           Container( decoration: BoxDecoration(borderRadius: BorderRadius.circular(20),color: Colors.lightBlueAccent),
@@ -37,7 +37,7 @@ class _LearnState extends State<Learn> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(Icons.color_lens_rounded, size: 50, color: Colors.white,),
-                Text("Colors", style: TextStyle(color: Colors.white, fontSize: 30),)
+                Text("Colors", style: TextStyle(color: Colors.white, fontSize: 22),)
               ],),
           ),
           Container( decoration: BoxDecoration(borderRadius: BorderRadius.circular(20),color: Colors.lightBlueAccent),
@@ -45,7 +45,7 @@ class _LearnState extends State<Learn> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(Icons.handshake, size: 50, color: Colors.white,),
-                Text("Greetings", style: TextStyle(color: Colors.white, fontSize: 30),)
+                Text("Greetings", style: TextStyle(color: Colors.white, fontSize: 22),)
               ],),
           ),
           Container( decoration: BoxDecoration(borderRadius: BorderRadius.circular(20),color: Colors.lightBlueAccent),
@@ -53,7 +53,7 @@ class _LearnState extends State<Learn> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(Icons.question_mark_rounded, size: 50, color: Colors.white,),
-                Text("Questions", style: TextStyle(color: Colors.white, fontSize: 30),)
+                Text("Questions", style: TextStyle(color: Colors.white, fontSize: 22),)
               ],),
           ),
           Container( decoration: BoxDecoration(borderRadius: BorderRadius.circular(20),color: Colors.lightBlueAccent),
@@ -61,7 +61,7 @@ class _LearnState extends State<Learn> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(Icons.family_restroom_rounded, size: 50, color: Colors.white,),
-                Text("Family", style: TextStyle(color: Colors.white, fontSize: 30),)
+                Text("Family", style: TextStyle(color: Colors.white, fontSize: 22),)
               ],),
           ),
 
@@ -70,7 +70,7 @@ class _LearnState extends State<Learn> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(Icons.calendar_month_rounded, size: 50, color: Colors.white,),
-                Text("Calendar", style: TextStyle(color: Colors.white, fontSize: 30),)
+                Text("Calendar", style: TextStyle(color: Colors.white, fontSize: 22),)
               ],),
           ),
 
@@ -79,7 +79,7 @@ class _LearnState extends State<Learn> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(Icons.sunny, size: 50, color: Colors.white,),
-                Text("Weather", style: TextStyle(color: Colors.white, fontSize: 30),)
+                Text("Weather", style: TextStyle(color: Colors.white, fontSize: 22),)
               ],),
           ),
         ],

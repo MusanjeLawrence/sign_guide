@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sign_guide/splash.dart';
 import 'package:sign_guide/dashboard.dart';
-import 'dashboard.dart';
 import 'learn.dart';
 void main() {
   runApp(const MyApp());
@@ -23,4 +22,6 @@ class MyApp extends StatelessWidget {
       home:Splash(),
     );
   }
+
+
 }
