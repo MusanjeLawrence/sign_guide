@@ -11,8 +11,8 @@ class Text_to_Sign extends StatefulWidget {
 }
 
 class _Text_to_SignState extends State<Text_to_Sign> {
-  //controller to get what user has entered and keep track of it
-
+  //controller to get what u
+  final _textController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
