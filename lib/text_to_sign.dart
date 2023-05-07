@@ -57,7 +57,6 @@ class _Text_to_SignState extends State<Text_to_Sign> {
               ),
               ),
             ),
-
             //dislaying text that user typed in code
             Expanded(
               child: Container(
