@@ -6,6 +6,7 @@ import 'package:sign_guide/text_to_sign.dart';
 import 'package:sign_guide/treasure.dart';
 import 'package:sign_guide/voice_to_sign.dart';
 import 'dashboard.dart';
+import 'drawer.dart';
 import 'package:sign_guide/main.dart';
 
 import 'image_to_sign.dart';
@@ -18,6 +19,27 @@ class Learn extends StatefulWidget {
 }
 
 class _LearnState extends State<Learn> {
+
+
+  int _selectedIndex = 0;
+
+  static const List<Widget> _widgetOptions = <Widget>[
+    Text(
+      'Home Page',
+    ),
+    Text(
+      'Settings Page',
+    ),
+    Text(
+      'Share Page',
+    ),
+  ];
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
   @override
   Widget build(BuildContext context) {
      return Scaffold(
@@ -211,6 +233,26 @@ class _LearnState extends State<Learn> {
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, mainAxisSpacing: 10, crossAxisSpacing: 10),
         ),
       )),
+
+       bottomNavigationBar: BottomNavigationBar(
+         items: const <BottomNavigationBarItem>[
+           BottomNavigationBarItem(
+             icon: Icon(Icons.home),
+             label: 'Home',
+           ),
+           BottomNavigationBarItem(
+             icon: Icon(Icons.settings),
+             label: 'Settings',
+           ),
+           BottomNavigationBarItem(
+             icon: Icon(Icons.share),
+             label: 'Share',
+           ),
+         ],
+         currentIndex: _selectedIndex,
+         selectedItemColor: Colors.blueAccent,
+         onTap: _onItemTapped,
+       ),
     );
   }
 }

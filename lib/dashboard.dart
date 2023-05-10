@@ -15,9 +15,30 @@ class Dashboard extends StatefulWidget {
 
   @override
   State<Dashboard> createState() => _DashboardState();
+
 }
 
 class _DashboardState extends State<Dashboard> {
+
+  int _selectedIndex = 0;
+
+  static const List<Widget> _widgetOptions = <Widget>[
+    Text(
+      'Home Page',
+    ),
+    Text(
+      'Settings Page',
+    ),
+    Text(
+      'Share Page',
+    ),
+  ];
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,7 +52,7 @@ class _DashboardState extends State<Dashboard> {
             );
           },
         ),
-        title: Text("Welcome to Sign Language Guide App"),
+        title: Text("Sign Language Guide App"),
       ),
       drawer: Drawer(
         child: ListView(
@@ -290,6 +311,26 @@ class _DashboardState extends State<Dashboard> {
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, mainAxisSpacing: 10, crossAxisSpacing: 10),
         ),
       )),
+
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.settings),
+            label: 'Settings',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.share),
+            label: 'Share',
+          ),
+        ],
+        currentIndex: _selectedIndex,
+        selectedItemColor: Colors.blueAccent,
+        onTap: _onItemTapped,
+      ),
     );
   }
 }
