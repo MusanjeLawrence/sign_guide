@@ -1,13 +1,16 @@
+import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
 import 'package:sign_guide/settings.dart';
 import 'package:sign_guide/share.dart';
 import 'package:sign_guide/sign_to_text.dart';
 import 'package:sign_guide/text_to_sign.dart';
 import 'package:sign_guide/treasure.dart';
+import 'package:speech_to_text/speech_to_text.dart';
 import 'dashboard.dart';
 import 'image_to_sign.dart';
 import 'learn.dart';
 import 'main.dart';
+import 'package:speech_to_text/speech_to_text.dart' as stt;
 
 class Voice_To_Sign extends StatefulWidget {
   const Voice_To_Sign({Key? key}) : super(key: key);
@@ -18,6 +21,39 @@ class Voice_To_Sign extends StatefulWidget {
 
 class _Voice_To_SignState extends State<Voice_To_Sign> {
 
+  stt.SpeechToText _speech = SpeechToText();
+  bool _isListening = false;
+  String _textSpeech = 'Press button to start speaking';
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _speech = stt.SpeechToText();
+  }
+  void onListen() async{
+    if(!_isListening){
+      bool available = await _speech.initialize(
+        onStatus: (val) => print('onStatus: $val'),
+        onError: (val) => print('onError: $val')
+      );
+      if (available){
+        setState(() {
+          _isListening = true;
+        });
+        _speech.listen(
+          onResult: (val) => setState(() {
+              _textSpeech = val.recognizedWords;
+          })
+        );
+      }
+    }else{
+      setState(() {
+        _isListening = false;
+        _speech.stop();
+      });
+    }
+  }
 
   int _selectedIndex = 0;
 
@@ -38,6 +74,7 @@ class _Voice_To_SignState extends State<Voice_To_Sign> {
       _selectedIndex = index;
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -160,6 +197,37 @@ class _Voice_To_SignState extends State<Voice_To_Sign> {
           ],
         ),
       ),
+
+      //making functionality for speech to text before to sign
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: AvatarGlow(
+        animate: _isListening,
+        glowColor: Theme.of(context).primaryColor,
+        endRadius: 80,
+        duration: Duration(milliseconds: 2000),
+        repeatPauseDuration: Duration(milliseconds: 100),
+        repeat: true,
+        child: FloatingActionButton(
+          onPressed: () => onListen(),
+          child: Icon(_isListening ? Icons.mic : Icons.mic_none),
+        ),
+      ),
+      body: SingleChildScrollView(
+        reverse: true,
+        child: Container(
+          padding: EdgeInsets.fromLTRB(25, 25, 25, 150),
+          child: Text(
+            _textSpeech,
+            style: TextStyle(
+              fontSize: 32,
+              color: Colors.black,
+              fontWeight: FontWeight.w500
+            ),
+          ),
+        ),
+      ),
+
+      // bottom navigation bar
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
