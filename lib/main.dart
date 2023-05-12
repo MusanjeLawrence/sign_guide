@@ -8,6 +8,7 @@ import 'package:sign_guide/text_to_sign.dart';
 import 'package:sign_guide/treasure.dart';
 import 'package:sign_guide/voice_to_sign.dart';
 import 'image_to_sign.dart';
+import 'alphabets.dart';
 import 'learn.dart';
 
 void main() {

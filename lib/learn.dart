@@ -7,7 +7,7 @@ import 'package:sign_guide/treasure.dart';
 import 'package:sign_guide/voice_to_sign.dart';
 import 'alphabets.dart';
 import 'dashboard.dart';
-import 'drawer.dart';
+import 'package:sign_guide/drawer.dart';
 import 'package:sign_guide/main.dart';
 
 import 'image_to_sign.dart';

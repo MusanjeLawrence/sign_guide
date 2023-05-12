@@ -314,10 +314,12 @@ class _DashboardState extends State<Dashboard> {
 
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
+
+           BottomNavigationBarItem(
+             icon: Icon(Icons.home),
+             label: 'Home',
+           ),
+
           BottomNavigationBarItem(
             icon: Icon(Icons.settings),
             label: 'Settings',
