@@ -9,7 +9,6 @@ import 'image_to_sign.dart';
 import 'main.dart';
 import 'learn.dart';
 import 'dashboard.dart';
-import 'drawer.dart';
 
 class Alphabets extends StatefulWidget {
   const Alphabets({Key? key}) : super(key: key);
@@ -217,22 +216,5 @@ class _AlphabetsState extends State<Alphabets> {
         onTap: _onItemTapped,
       ),
       );
-  }
-}
-
-class Drawer extends StatelessWidget {
-  const Drawer({Key? key, required ListView child}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      // appBar: AppBar(
-      //   title: Text('Sign Guide'),
-      //   leading: IconButton(
-      //     icon: Icon(Icons.menu),
-      //     onPressed: () => Scaffold.of(context).openDrawer(),
-      //   ),
-      // ),
-    );
   }
 }

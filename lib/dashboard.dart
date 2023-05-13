@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:sign_guide/image_to_sign.dart';
 import 'package:sign_guide/learn.dart';
 import 'package:sign_guide/settings.dart';
@@ -20,25 +21,6 @@ class Dashboard extends StatefulWidget {
 
 class _DashboardState extends State<Dashboard> {
 
-  int _selectedIndex = 0;
-
-  static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Home Page',
-    ),
-    Text(
-      'Settings Page',
-    ),
-    Text(
-      'Share Page',
-    ),
-  ];
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -312,26 +294,26 @@ class _DashboardState extends State<Dashboard> {
         ),
       )),
 
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-
-           BottomNavigationBarItem(
-             icon: Icon(Icons.home),
-             label: 'Home',
-           ),
-
-          BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Settings',
+      //navigation bar code
+      bottomNavigationBar: GNav(
+        backgroundColor: Colors.lightBlueAccent,
+        color: Colors.white,
+        activeColor: Colors.white,
+        tabBackgroundColor: Colors.blue,
+        gap: 8,
+        padding: EdgeInsets.all(16),
+        tabs: const [
+          GButton(
+              icon: Icons.home,
+            text: "Home",
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.share),
-            label: 'Share',
-          ),
+          GButton(
+              icon: Icons.settings,
+            text: "Settings",),
+          GButton(
+              icon: Icons.share,
+            text: "Share",),
         ],
-        currentIndex: _selectedIndex,
-        selectedItemColor: Colors.blueAccent,
-        onTap: _onItemTapped,
       ),
     );
   }

@@ -7,13 +7,10 @@ import 'package:sign_guide/treasure.dart';
 import 'package:sign_guide/voice_to_sign.dart';
 import 'alphabets.dart';
 import 'dashboard.dart';
-import 'package:sign_guide/drawer.dart';
-import 'package:sign_guide/main.dart';
-
 import 'image_to_sign.dart';
 
 class Learn extends StatefulWidget {
-  const Learn({super.key});
+  const Learn({Key? key}) : super(key: key);
 
   @override
   State<Learn> createState() => _LearnState();
@@ -77,7 +74,6 @@ class _LearnState extends State<Learn> {
                  );
                },
              ),
-
              ListTile(
                leading: Icon(Icons.sign_language),
                title: Text('Text To Sign'),
@@ -148,7 +144,6 @@ class _LearnState extends State<Learn> {
                  );
                },
              ),
-
              ListTile(
                leading: Icon(Icons.share),
                title: Text('Share'),
@@ -162,8 +157,10 @@ class _LearnState extends State<Learn> {
            ],
          ),
        ),
+
       //creating flutter cards to contain links to learn content
-      body: Container(child: Padding(
+      body: Container(
+          child: Padding(
         padding: const EdgeInsets.all(10.0),
         child: GridView(children: [
           GestureDetector(
