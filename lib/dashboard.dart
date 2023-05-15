@@ -21,6 +21,14 @@ class Dashboard extends StatefulWidget {
 
 class _DashboardState extends State<Dashboard> {
 
+  int selectedItemIndex = 0;
+
+  List<Widget> _widgets = [
+    Text("Home", style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold, color: Colors.amber),),
+    Text("Calls", style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold, color: Colors.blueAccent),),
+    Text("Chats", style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold, color: Colors.black ),),
+
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -288,32 +296,56 @@ class _DashboardState extends State<Dashboard> {
               ),
             ),
           ),
+        //     child: Center(
+        //       child: _widgets[selectedItemIndex],
+        //     ),
+        //   ),
+        //   bottomNavigationBar: BottomNavigationBar(
+        //       items: const <BottomNavigationBarItem>[
+        //         BottomNavigationBarItem(
+        //             icon: Icon(Icons.home),
+        //             label: 'Home'
+        //         ),
+        //         BottomNavigationBarItem(
+        //             icon: Icon(Icons.call),
+        //             label: 'Call'
+        //         ),
+        //
+        //         BottomNavigationBarItem(
+        //             icon: Icon(Icons.chat),
+        //             label: "Chat"
+        //         )
+        //       ],
+        //       currentIndex: selectedItemIndex,
+        //       onTap: (int index){
+        //         setState(() {
+        //           selectedItemIndex = index;
+        //         });
+        //       }
+
 
         ],
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, mainAxisSpacing: 10, crossAxisSpacing: 10),
         ),
       )),
-
-      //navigation bar code
-      bottomNavigationBar: GNav(
-        backgroundColor: Colors.lightBlueAccent,
-        color: Colors.white,
-        activeColor: Colors.white,
-        tabBackgroundColor: Colors.blue,
-        gap: 8,
-        padding: EdgeInsets.all(16),
-        tabs: const [
-          GButton(
-              icon: Icons.home,
-            text: "Home",
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
           ),
-          GButton(
-              icon: Icons.settings,
-            text: "Settings",),
-          GButton(
-              icon: Icons.share,
-            text: "Share",),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.settings),
+            label: 'Settings',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.share),
+            label: 'Share',
+          ),
         ],
+        // currentIndex: _selectedIndex,
+        // selectedItemColor: Colors.blueAccent,
+        // onTap: _onItemTapped,
       ),
     );
   }

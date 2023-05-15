@@ -41,7 +41,7 @@ class _Image_To_SignState extends State<Image_To_Sign> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
+      backgroundColor: Color(0xffF8F9FB),
       appBar: AppBar(
         leading: Builder(
           builder: (BuildContext context) {
@@ -178,6 +178,27 @@ class _Image_To_SignState extends State<Image_To_Sign> {
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.blueAccent,
         onTap: _onItemTapped,
+      ),
+
+      //starting code for making picking text from image work
+      body: SingleChildScrollView(
+        child: Container(
+          alignment: Alignment.center,
+          child: Column(
+            children: [
+              SizedBox(
+                height: 55,
+              ),
+              Text("Image to Text",
+              style: TextStyle(
+                fontSize: 30,
+                color: Color(0xff1738EB),
+                fontWeight: FontWeight.w800,
+              ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

@@ -24,7 +24,7 @@ class _SplashState extends State<Splash> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.lightBlueAccent,
+      backgroundColor: Colors.white,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -34,7 +34,7 @@ class _SplashState extends State<Splash> {
               style: TextStyle(
                 fontSize: 50.0,
                 fontWeight: FontWeight.bold,
-                color: Colors.black,
+                color: Colors.lightBlueAccent,
               ),
             ),
             // SizedBox(height: 16.0),
