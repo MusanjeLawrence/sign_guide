@@ -1,4 +1,6 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:sign_guide/settings.dart';
 import 'package:sign_guide/share.dart';
 import 'package:sign_guide/sign_to_text.dart';
@@ -38,10 +40,80 @@ class _Image_To_SignState extends State<Image_To_Sign> {
       _selectedIndex = index;
     });
   }
+
+  //enabling the add file png to open camera and gallery
+  File pickedimage;
+  optionsdialog(BuildContext context){
+    return showDialog(
+      context: context,
+      builder: (context){
+        return SimpleDialog(
+          children: [
+            SimpleDialogOption(
+              onPressed: () => pickimage(ImageSource.gallery),
+              child: Text("Gallery",
+              style: TextStyle(
+                fontSize: 20,
+                color: Colors.black,
+                fontWeight: FontWeight.w800
+              ),
+              ),
+            ),
+            SimpleDialogOption(
+              onPressed: () => pickimage(ImageSource.camera),
+              child: Text("Camera",
+                style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.black,
+                    fontWeight: FontWeight.w800
+                ),
+              ),
+            ),
+            SimpleDialogOption(
+              onPressed: ()=> Navigator.pop(context),
+              child: Text("Cancel",
+                style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.black,
+                    fontWeight: FontWeight.w800
+                ),
+              ),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  pickimage(ImageSource source) async{
+    final image = await ImagePicker().pickImage(source: source);
+    setState(() {
+      pickedimage = File(image.path);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xffF8F9FB),
+      floatingActionButton: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          FloatingActionButton(
+            heroTag: null,
+            onPressed: () {  },
+            child: Icon(Icons.copy, size: 28),
+          ),
+          SizedBox(width:10 ),
+          FloatingActionButton(
+            backgroundColor: Color(0xffEC360E),
+            heroTag: null,
+              onPressed: () {  },
+            child: Icon(Icons.reply, size: 34),
+          ),
+        ],
+      ),
+
       appBar: AppBar(
         leading: Builder(
           builder: (BuildContext context) {
@@ -187,15 +259,34 @@ class _Image_To_SignState extends State<Image_To_Sign> {
           child: Column(
             children: [
               SizedBox(
-                height: 55,
+                height: 55 + MediaQuery.of(context).viewInsets.top,
               ),
               Text("Image to Text",
               style: TextStyle(
-                fontSize: 30,
-                color: Color(0xff1738EB),
+                fontSize: 35,
+                color: Color(0xff1738EB).withOpacity(0.6),
                 fontWeight: FontWeight.w800,
               ),
               ),
+              SizedBox(
+                height: 30,),
+              InkWell(
+                onTap: ()=> optionsdialog(context),
+                child: Image(
+                  width: 150,
+                    height: 150,
+                    image:pickedimage == null
+                        ?  AssetImage('assets/images/add_file.png')
+                        : FileImage(pickedimage),
+                  fit: BoxFit.fill,
+                ),
+              ),
+              SizedBox(height: 30,),
+              Text("Lorem qbcqbcqikbcb",
+                style: TextStyle(
+               fontSize: 25,
+                  color: Color(0xff1738EB).withOpacity(0.6),
+                fontWeight: FontWeight.w600),),
             ],
           ),
         ),
