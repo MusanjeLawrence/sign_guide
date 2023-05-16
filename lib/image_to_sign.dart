@@ -1,4 +1,7 @@
+import 'dart:convert';
 import 'dart:io';
+import 'dart:io' as Io;
+import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:sign_guide/settings.dart';
@@ -7,6 +10,8 @@ import 'package:sign_guide/sign_to_text.dart';
 import 'package:sign_guide/text_to_sign.dart';
 import 'package:sign_guide/treasure.dart';
 import 'package:sign_guide/voice_to_sign.dart';
+import 'apikey.dart';
+import 'package:http/http.dart' as http;
 import 'dashboard.dart';
 import 'learn.dart';
 import 'main.dart';
@@ -42,7 +47,7 @@ class _Image_To_SignState extends State<Image_To_Sign> {
   }
 
   //enabling the add file png to open camera and gallery
-  File pickedimage;
+  File? pickedimage;
   optionsdialog(BuildContext context){
     return showDialog(
       context: context,
@@ -85,12 +90,29 @@ class _Image_To_SignState extends State<Image_To_Sign> {
     );
   }
 
-  pickimage(ImageSource source) async{
-    final image = await ImagePicker().pickImage(source: source);
-    setState(() {
-      pickedimage = File(image.path);
-    });
+  pickimage(ImageSource source) async {
+    final image = await ImagePicker().pickImage(source: source) as File;
+      setState(() {
+        pickedimage = File(image.path);
+      });
+      Navigator.pop(context);
+
+      //prepare the image
+    Uint8List bytes = Io.File(pickedimage!.path).readAsBytesSync();
+    String img64 = base64Encode(bytes);
+
+    //send to api..ocr
+    String url = "https://api.ocr.space/parse/image";
+    var data = {"base64Image": "data:image/jpg;base64,$img64"};
+    var header = {"apikey": apikey};
+    httpResponse response = await http.post(url, body: data, headers: header);
+
+    //get data back
+    Map result = jsonDecode(response.body);
+    print(result['ParsedResults'][0]['ParsedText']);
   }
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -134,9 +156,8 @@ class _Image_To_SignState extends State<Image_To_Sign> {
               child: Text('Sign Guide App '),
               decoration: BoxDecoration(
                 color: Colors.blueAccent,
-              ),
             ),
-
+            ),
             ListTile(
               leading: Icon(Icons.home),
               title: Text('Home'),
@@ -271,18 +292,20 @@ class _Image_To_SignState extends State<Image_To_Sign> {
               SizedBox(
                 height: 30,),
               InkWell(
-                onTap: ()=> optionsdialog(context),
+                onTap: () => optionsdialog(context),
                 child: Image(
                   width: 150,
-                    height: 150,
-                    image:pickedimage == null
-                        ?  AssetImage('assets/images/add_file.png')
-                        : FileImage(pickedimage),
+                  height: 150,
+                  image: pickedimage == null
+                      ? AssetImage('assets/images/add_file.png')
+                      : Image.file(pickedimage!).image,
                   fit: BoxFit.fill,
                 ),
+
               ),
+
               SizedBox(height: 30,),
-              Text("Lorem qbcqbcqikbcb",
+              Text("Select image",
                 style: TextStyle(
                fontSize: 25,
                   color: Color(0xff1738EB).withOpacity(0.6),
