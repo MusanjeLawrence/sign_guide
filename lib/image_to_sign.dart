@@ -1,8 +1,4 @@
-import 'dart:convert';
 import 'dart:io';
-import 'dart:io' as Io;
-import 'dart:typed_data';
-import 'package:clipboard/clipboard.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:sign_guide/settings.dart';
@@ -11,11 +7,10 @@ import 'package:sign_guide/sign_to_text.dart';
 import 'package:sign_guide/text_to_sign.dart';
 import 'package:sign_guide/treasure.dart';
 import 'package:sign_guide/voice_to_sign.dart';
-import 'apikey.dart';
-import 'package:http/http.dart' as http;
 import 'dashboard.dart';
 import 'learn.dart';
-import 'main.dart';
+import 'package:sign_guide/utils/utils.dart';
+import 'package:google_mlkit_text_recognition/google_mlkit_text_recognition.dart';
 
 class Image_To_Sign extends StatefulWidget {
   const Image_To_Sign({Key? key}) : super(key: key);
@@ -46,80 +41,33 @@ class _Image_To_SignState extends State<Image_To_Sign> {
       _selectedIndex = index;
     });
   }
+  File? _pickedImage;
+  String outputText = "";
 
-  //enabling the add file png to open camera and gallery
-  File? pickedimage;
-  bool scanning = false;
-  String scannedText ='';
-  optionsdialog(BuildContext context){
-    return showDialog(
-      context: context,
-      builder: (context){
-        return SimpleDialog(
-          children: [
-            SimpleDialogOption(
-              onPressed: () => pickimage(ImageSource.gallery),
-              child: Text("Gallery",
-                style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.black,
-                    fontWeight: FontWeight.w800
-                ),
-              ),
-            ),
-            SimpleDialogOption(
-              onPressed: () => pickimage(ImageSource.camera),
-              child: Text("Camera",
-                style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.black,
-                    fontWeight: FontWeight.w800
-                ),
-              ),
-            ),
-            SimpleDialogOption(
-              onPressed: ()=> Navigator.pop(context),
-              child: Text("Cancel",
-                style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.black,
-                    fontWeight: FontWeight.w800
-                ),
-              ),
-            ),
-          ],
-        );
-      },
-    );
+  pickedImage(File file) {
+    setState(() {
+      _pickedImage = file;
+    });
+
+    InputImage inputImage = InputImage.fromFile(file);
+    //code to recognize image
+    processImageForConversion(inputImage);
   }
 
-  pickimage(ImageSource source) async {
-    final image = await ImagePicker().pickImage(source: source) as File;
+  processImageForConversion(inputImage) async {
     setState(() {
-      scanning = true;
-      pickedimage = File(image.path);
+      outputText = "";
     });
-    //closing the dialogue
-    Navigator.pop(context);
 
-    //prepare the image to send it to the api
-    Uint8List bytes = Io.File(pickedimage!.path).readAsBytesSync();
-    String img64 = base64Encode(bytes);
+    final textRecognizer = TextRecognizer(script: TextRecognitionScript.latin);
+    final RecognizedText recognizedText =
+    await textRecognizer.processImage(inputImage);
 
-    //send to api..ocr
-    String url = "https://api.ocr.space/parse/image";
-    var data = {"base64Image": "data:image/jpg;base64,$img64"};
-    var header = {"apikey": apikey};
-    http.Response response = await http.post(url as Uri, body: data, headers: header);
-
-    //get data back
-    Map result = jsonDecode(response.body);
-    print(result['ParsedResults'][0]['ParsedText']);
-    setState(() {
-      scanning = false;
-      scannedText = result['ParsedResults'][0]['ParsedText'];
-
-    });
+    for (TextBlock block in recognizedText.blocks) {
+      setState(() {
+        outputText += block.text + "\n";
+      });
+    }
   }
 
 
@@ -127,39 +75,7 @@ class _Image_To_SignState extends State<Image_To_Sign> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffF8F9FB),
-      floatingActionButton: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          FloatingActionButton(
-            heroTag: null,
-            onPressed: () {
-              FlutterClipboard.copy(scannedText).then((value) {
-                SnackBar snackBar = SnackBar(
-                  content: Text(
-                    "Copied to clipboard",
-                    style: TextStyle(
-                      fontSize: 18,
-                      color: Colors.white,
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                );
-                ScaffoldMessenger.of(context).showSnackBar(snackBar);
-              });
-            },
-            child: Icon(Icons.copy, size: 28),
-          ),
-          SizedBox(width:10 ),
-          FloatingActionButton(
-            backgroundColor: Color(0xffEC360E),
-            heroTag: null,
-            onPressed: () {  },
-            child: Icon(Icons.reply, size: 34),
-          ),
-        ],
-      ),
-
+      resizeToAvoidBottomInset : true,
       appBar: AppBar(
         leading: Builder(
           builder: (BuildContext context) {
@@ -296,55 +212,40 @@ class _Image_To_SignState extends State<Image_To_Sign> {
         selectedItemColor: Colors.blueAccent,
         onTap: _onItemTapped,
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          pickImage(ImageSource.gallery, pickedImage);
+        },
+        child: Icon(Icons.image),
+      ),
 
-      //starting code for making picking text from image work
-      body: SingleChildScrollView(
-        child: Container(
-          alignment: Alignment.center,
-          child: Column(
-            children: [
+      body: SizedBox(
+          height: double.infinity,
+          child: Column(children: [
+            if (_pickedImage == null)
+              Container(
+                height: 300,
+                color: Colors.black,
+                width: double.infinity,
+              )
+            else
               SizedBox(
-                height: 55 + MediaQuery.of(context).viewInsets.top,
-              ),
-              Text("Image to Text",
-                style: TextStyle(
-                  fontSize: 35,
-                  color: Color(0xff1738EB).withOpacity(0.6),
-                  fontWeight: FontWeight.w800,
-                ),
-              ),
-              SizedBox(
-                height: 30,),
-              InkWell(
-                onTap: () => optionsdialog(context),
-                child: Image(
-                  width: 150,
-                  height: 150,
-                  image: pickedimage == null
-                      ? AssetImage('assets/images/add_file.png')
-                      : Image.file(pickedimage!).image,
+                height: 300,
+                width: double.infinity,
+                child: Image.file(
+                  _pickedImage!,
                   fit: BoxFit.fill,
                 ),
-
               ),
-
-              SizedBox(height: 30,),
-              scanning ? Text("Scanning....",
-                  style: TextStyle(
-                    fontSize:   30,
-                    color: Colors.black,
-                    fontWeight: FontWeight.w700,
-                  )) : Text(scannedText,
-                  style: TextStyle(
-                      fontSize: 25,
-                      color: Color(0xff1738EB).withOpacity(0.6),
-                      fontWeight: FontWeight.w600),
-                  textAlign: TextAlign.center
-              ),
-            ],
-          ),
+            Expanded(child: Container()),
+            Text(
+              outputText,
+              style: TextStyle(fontSize: 24),
+            ),
+            Expanded(child: Container()),
+          ]),
         ),
-      ),
+
     );
   }
 }
