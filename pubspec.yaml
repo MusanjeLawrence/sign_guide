@@ -41,6 +41,7 @@ dependencies:
   google_nav_bar: ^5.0.6
   image_picker: ^0.8.7+5
   http:
+  clipboard:
 
 dev_dependencies:
   flutter_test:

@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 import 'dart:io' as Io;
 import 'dart:typed_data';
+import 'package:clipboard/clipboard.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:sign_guide/settings.dart';
@@ -48,6 +49,8 @@ class _Image_To_SignState extends State<Image_To_Sign> {
 
   //enabling the add file png to open camera and gallery
   File? pickedimage;
+  bool scanning = false;
+  String scannedText ='';
   optionsdialog(BuildContext context){
     return showDialog(
       context: context,
@@ -93,11 +96,13 @@ class _Image_To_SignState extends State<Image_To_Sign> {
   pickimage(ImageSource source) async {
     final image = await ImagePicker().pickImage(source: source) as File;
       setState(() {
+        scanning = true;
         pickedimage = File(image.path);
       });
+      //closing the dialogue
       Navigator.pop(context);
 
-      //prepare the image
+      //prepare the image to send it to the api
     Uint8List bytes = Io.File(pickedimage!.path).readAsBytesSync();
     String img64 = base64Encode(bytes);
 
@@ -105,11 +110,16 @@ class _Image_To_SignState extends State<Image_To_Sign> {
     String url = "https://api.ocr.space/parse/image";
     var data = {"base64Image": "data:image/jpg;base64,$img64"};
     var header = {"apikey": apikey};
-    httpResponse response = await http.post(url, body: data, headers: header);
+    http.Response response = await http.post(url as Uri, body: data, headers: header);
 
     //get data back
     Map result = jsonDecode(response.body);
     print(result['ParsedResults'][0]['ParsedText']);
+    setState(() {
+      scanning = false;
+      scannedText = result['ParsedResults'][0]['ParsedText'];
+
+    });
   }
 
 
@@ -123,7 +133,21 @@ class _Image_To_SignState extends State<Image_To_Sign> {
         children: [
           FloatingActionButton(
             heroTag: null,
-            onPressed: () {  },
+            onPressed: () {
+              FlutterClipboard.copy(scannedText).then((value) => {
+                SnackBar snackBar = SnackBar(
+              content: Text(
+              "Copied to clipboard",
+                style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.white,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+               );
+                ScaffoldMessenger.of(context).showSnackBar(snackBar);
+              });
+            },
             child: Icon(Icons.copy, size: 28),
           ),
           SizedBox(width:10 ),
@@ -305,11 +329,18 @@ class _Image_To_SignState extends State<Image_To_Sign> {
               ),
 
               SizedBox(height: 30,),
-              Text("Select image",
+              scanning ? Text("Scanning....",
+              style: TextStyle(
+                fontSize:   30,
+                color: Colors.black,
+                fontWeight: FontWeight.w700,
+              )) : Text(scannedText,
                 style: TextStyle(
                fontSize: 25,
                   color: Color(0xff1738EB).withOpacity(0.6),
-                fontWeight: FontWeight.w600),),
+                fontWeight: FontWeight.w600),
+                textAlign: TextAlign.center
+              ),
             ],
           ),
         ),
