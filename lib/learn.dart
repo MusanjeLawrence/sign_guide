@@ -161,9 +161,10 @@ class _LearnState extends State<Learn> {
       //creating flutter cards to contain links to learn content
       body: Container(
           child: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: GridView(children: [
-          GestureDetector(
+        padding: const EdgeInsets.fromLTRB(15, 10, 10, 0),
+        child: GridView(
+          children: [
+            GestureDetector(
             onTap: () {
               Navigator.push(
                 context,
@@ -186,7 +187,8 @@ class _LearnState extends State<Learn> {
                 ],
               ),
             ),
-          ), GestureDetector(
+          ),
+          GestureDetector(
             onTap: () {
               Navigator.push(
                 context,
@@ -356,6 +358,7 @@ class _LearnState extends State<Learn> {
 
        bottomNavigationBar: BottomNavigationBar(
          items: const <BottomNavigationBarItem>[
+
            BottomNavigationBarItem(
              icon: Icon(Icons.home),
              label: 'Home',

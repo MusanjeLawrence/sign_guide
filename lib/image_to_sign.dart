@@ -60,11 +60,11 @@ class _Image_To_SignState extends State<Image_To_Sign> {
             SimpleDialogOption(
               onPressed: () => pickimage(ImageSource.gallery),
               child: Text("Gallery",
-              style: TextStyle(
-                fontSize: 20,
-                color: Colors.black,
-                fontWeight: FontWeight.w800
-              ),
+                style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.black,
+                    fontWeight: FontWeight.w800
+                ),
               ),
             ),
             SimpleDialogOption(
@@ -95,14 +95,14 @@ class _Image_To_SignState extends State<Image_To_Sign> {
 
   pickimage(ImageSource source) async {
     final image = await ImagePicker().pickImage(source: source) as File;
-      setState(() {
-        scanning = true;
-        pickedimage = File(image.path);
-      });
-      //closing the dialogue
-      Navigator.pop(context);
+    setState(() {
+      scanning = true;
+      pickedimage = File(image.path);
+    });
+    //closing the dialogue
+    Navigator.pop(context);
 
-      //prepare the image to send it to the api
+    //prepare the image to send it to the api
     Uint8List bytes = Io.File(pickedimage!.path).readAsBytesSync();
     String img64 = base64Encode(bytes);
 
@@ -134,17 +134,17 @@ class _Image_To_SignState extends State<Image_To_Sign> {
           FloatingActionButton(
             heroTag: null,
             onPressed: () {
-              FlutterClipboard.copy(scannedText).then((value) => {
+              FlutterClipboard.copy(scannedText).then((value) {
                 SnackBar snackBar = SnackBar(
-              content: Text(
-              "Copied to clipboard",
-                style: TextStyle(
-                  fontSize: 18,
-                  color: Colors.white,
-                  fontWeight: FontWeight.w700,
-                ),
-              ),
-               );
+                  content: Text(
+                    "Copied to clipboard",
+                    style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                );
                 ScaffoldMessenger.of(context).showSnackBar(snackBar);
               });
             },
@@ -154,7 +154,7 @@ class _Image_To_SignState extends State<Image_To_Sign> {
           FloatingActionButton(
             backgroundColor: Color(0xffEC360E),
             heroTag: null,
-              onPressed: () {  },
+            onPressed: () {  },
             child: Icon(Icons.reply, size: 34),
           ),
         ],
@@ -180,7 +180,7 @@ class _Image_To_SignState extends State<Image_To_Sign> {
               child: Text('Sign Guide App '),
               decoration: BoxDecoration(
                 color: Colors.blueAccent,
-            ),
+              ),
             ),
             ListTile(
               leading: Icon(Icons.home),
@@ -307,11 +307,11 @@ class _Image_To_SignState extends State<Image_To_Sign> {
                 height: 55 + MediaQuery.of(context).viewInsets.top,
               ),
               Text("Image to Text",
-              style: TextStyle(
-                fontSize: 35,
-                color: Color(0xff1738EB).withOpacity(0.6),
-                fontWeight: FontWeight.w800,
-              ),
+                style: TextStyle(
+                  fontSize: 35,
+                  color: Color(0xff1738EB).withOpacity(0.6),
+                  fontWeight: FontWeight.w800,
+                ),
               ),
               SizedBox(
                 height: 30,),
@@ -330,16 +330,16 @@ class _Image_To_SignState extends State<Image_To_Sign> {
 
               SizedBox(height: 30,),
               scanning ? Text("Scanning....",
-              style: TextStyle(
-                fontSize:   30,
-                color: Colors.black,
-                fontWeight: FontWeight.w700,
-              )) : Text(scannedText,
-                style: TextStyle(
-               fontSize: 25,
-                  color: Color(0xff1738EB).withOpacity(0.6),
-                fontWeight: FontWeight.w600),
-                textAlign: TextAlign.center
+                  style: TextStyle(
+                    fontSize:   30,
+                    color: Colors.black,
+                    fontWeight: FontWeight.w700,
+                  )) : Text(scannedText,
+                  style: TextStyle(
+                      fontSize: 25,
+                      color: Color(0xff1738EB).withOpacity(0.6),
+                      fontWeight: FontWeight.w600),
+                  textAlign: TextAlign.center
               ),
             ],
           ),

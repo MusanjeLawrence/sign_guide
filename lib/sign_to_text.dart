@@ -160,6 +160,7 @@ class _Sign_To_TextState extends State<Sign_To_Text> {
           ],
         ),
       ),
+
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(

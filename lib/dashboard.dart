@@ -152,7 +152,7 @@ class _DashboardState extends State<Dashboard> {
       ),
       body: Container(
           child: Padding(
-        padding: const EdgeInsets.all(10.0),
+        padding: const EdgeInsets.fromLTRB(15, 10, 10, 0),
         child: GridView(children: [
           GestureDetector(
             onTap: () {
@@ -296,57 +296,11 @@ class _DashboardState extends State<Dashboard> {
               ),
             ),
           ),
-        //     child: Center(
-        //       child: _widgets[selectedItemIndex],
-        //     ),
-        //   ),
-        //   bottomNavigationBar: BottomNavigationBar(
-        //       items: const <BottomNavigationBarItem>[
-        //         BottomNavigationBarItem(
-        //             icon: Icon(Icons.home),
-        //             label: 'Home'
-        //         ),
-        //         BottomNavigationBarItem(
-        //             icon: Icon(Icons.call),
-        //             label: 'Call'
-        //         ),
-        //
-        //         BottomNavigationBarItem(
-        //             icon: Icon(Icons.chat),
-        //             label: "Chat"
-        //         )
-        //       ],
-        //       currentIndex: selectedItemIndex,
-        //       onTap: (int index){
-        //         setState(() {
-        //           selectedItemIndex = index;
-        //         });
-        //       }
-
-
         ],
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, mainAxisSpacing: 10, crossAxisSpacing: 10),
         ),
       )),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Settings',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.share),
-            label: 'Share',
-          ),
-        ],
-        // currentIndex: _selectedIndex,
-        // selectedItemColor: Colors.blueAccent,
-        // onTap: _onItemTapped,
-      ),
+
     );
   }
 }
