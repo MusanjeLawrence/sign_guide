@@ -9,7 +9,6 @@ import 'package:speech_to_text/speech_to_text.dart';
 import 'dashboard.dart';
 import 'image_to_sign.dart';
 import 'learn.dart';
-import 'main.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
 
 class Voice_To_Sign extends StatefulWidget {
@@ -20,7 +19,6 @@ class Voice_To_Sign extends StatefulWidget {
 }
 
 class _Voice_To_SignState extends State<Voice_To_Sign> {
-
   stt.SpeechToText _speech = SpeechToText();
   bool _isListening = false;
   String _textSpeech = 'Press button to start speaking';
@@ -31,23 +29,22 @@ class _Voice_To_SignState extends State<Voice_To_Sign> {
     super.initState();
     _speech = stt.SpeechToText();
   }
-  void onListen() async{
-    if(!_isListening){
+
+  void onListen() async {
+    if (!_isListening) {
       bool available = await _speech.initialize(
-        onStatus: (val) => print('onStatus: $val'),
-        onError: (val) => print('onError: $val')
-      );
-      if (available){
+          onStatus: (val) => print('onStatus: $val'),
+          onError: (val) => print('onError: $val'));
+      if (available) {
         setState(() {
           _isListening = true;
         });
         _speech.listen(
-          onResult: (val) => setState(() {
-              _textSpeech = val.recognizedWords;
-          })
-        );
+            onResult: (val) => setState(() {
+                  _textSpeech = val.recognizedWords;
+                }));
       }
-    }else{
+    } else {
       setState(() {
         _isListening = false;
         _speech.stop();
@@ -78,7 +75,6 @@ class _Voice_To_SignState extends State<Voice_To_Sign> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       appBar: AppBar(
         leading: Builder(
           builder: (BuildContext context) {
@@ -89,7 +85,6 @@ class _Voice_To_SignState extends State<Voice_To_Sign> {
           },
         ),
         title: Text("Voice To Sign Language"),
-
       ),
       drawer: Drawer(
         child: ListView(
@@ -101,18 +96,17 @@ class _Voice_To_SignState extends State<Voice_To_Sign> {
                 color: Colors.blueAccent,
               ),
             ),
-
             ListTile(
               leading: Icon(Icons.home),
               title: Text('Home'),
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Dashboard(title: 'sign guide')),
+                  MaterialPageRoute(
+                      builder: (context) => Dashboard(title: 'sign guide')),
                 );
               },
             ),
-
             ListTile(
               leading: Icon(Icons.sign_language),
               title: Text('Text To Sign'),
@@ -183,7 +177,6 @@ class _Voice_To_SignState extends State<Voice_To_Sign> {
                 );
               },
             ),
-
             ListTile(
               leading: Icon(Icons.share),
               title: Text('Share'),
@@ -219,10 +212,7 @@ class _Voice_To_SignState extends State<Voice_To_Sign> {
           child: Text(
             _textSpeech,
             style: TextStyle(
-              fontSize: 32,
-              color: Colors.black,
-              fontWeight: FontWeight.w500
-            ),
+                fontSize: 32, color: Colors.black, fontWeight: FontWeight.w500),
           ),
         ),
       ),

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'alphabets.dart';
 import 'dashboard.dart';
-import 'main.dart';
 import 'dart:async';
 
 class Splash extends StatefulWidget {
@@ -16,7 +14,10 @@ class _SplashState extends State<Splash> {
     super.initState();
     Timer(Duration(seconds: 3), () {
       Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (context) => Dashboard(title: "Dashboard")), // replace with actual widget for dashboard screen
+        MaterialPageRoute(
+            builder: (context) => Dashboard(
+                title:
+                    "Dashboard")), // replace with actual widget for dashboard screen
       );
     });
   }

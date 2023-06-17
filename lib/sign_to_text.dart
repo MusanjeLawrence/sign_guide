@@ -7,7 +7,6 @@ import 'package:sign_guide/voice_to_sign.dart';
 import 'dashboard.dart';
 import 'image_to_sign.dart';
 import 'learn.dart';
-import 'main.dart';
 
 class Sign_To_Text extends StatefulWidget {
   const Sign_To_Text({Key? key}) : super(key: key);
@@ -17,8 +16,6 @@ class Sign_To_Text extends StatefulWidget {
 }
 
 class _Sign_To_TextState extends State<Sign_To_Text> {
-
-
   int _selectedIndex = 0;
 
   static const List<Widget> _widgetOptions = <Widget>[
@@ -38,10 +35,10 @@ class _Sign_To_TextState extends State<Sign_To_Text> {
       _selectedIndex = index;
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       appBar: AppBar(
         leading: Builder(
           builder: (BuildContext context) {
@@ -52,7 +49,6 @@ class _Sign_To_TextState extends State<Sign_To_Text> {
           },
         ),
         title: Text("Sign Language To Text"),
-
       ),
       drawer: Drawer(
         child: ListView(
@@ -64,18 +60,17 @@ class _Sign_To_TextState extends State<Sign_To_Text> {
                 color: Colors.blueAccent,
               ),
             ),
-
             ListTile(
               leading: Icon(Icons.home),
               title: Text('Home'),
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Dashboard(title: 'sign guide')),
+                  MaterialPageRoute(
+                      builder: (context) => Dashboard(title: 'sign guide')),
                 );
               },
             ),
-
             ListTile(
               leading: Icon(Icons.sign_language),
               title: Text('Text To Sign'),
@@ -146,7 +141,6 @@ class _Sign_To_TextState extends State<Sign_To_Text> {
                 );
               },
             ),
-
             ListTile(
               leading: Icon(Icons.share),
               title: Text('Share'),
@@ -160,7 +154,6 @@ class _Sign_To_TextState extends State<Sign_To_Text> {
           ],
         ),
       ),
-
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(

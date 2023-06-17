@@ -6,7 +6,6 @@ import 'package:sign_guide/voice_to_sign.dart';
 import 'dashboard.dart';
 import 'image_to_sign.dart';
 import 'learn.dart';
-import 'main.dart';
 import 'sign_to_text.dart';
 
 class Treasure extends StatefulWidget {
@@ -17,8 +16,6 @@ class Treasure extends StatefulWidget {
 }
 
 class _TreasureState extends State<Treasure> {
-
-
   int _selectedIndex = 0;
 
   static const List<Widget> _widgetOptions = <Widget>[
@@ -38,10 +35,10 @@ class _TreasureState extends State<Treasure> {
       _selectedIndex = index;
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       appBar: AppBar(
         leading: Builder(
           builder: (BuildContext context) {
@@ -52,7 +49,6 @@ class _TreasureState extends State<Treasure> {
           },
         ),
         title: Text("Treasure Hunt"),
-
       ),
       drawer: Drawer(
         child: ListView(
@@ -64,18 +60,17 @@ class _TreasureState extends State<Treasure> {
                 color: Colors.blueAccent,
               ),
             ),
-
             ListTile(
               leading: Icon(Icons.home),
               title: Text('Home'),
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Dashboard(title: 'sign guide')),
+                  MaterialPageRoute(
+                      builder: (context) => Dashboard(title: 'sign guide')),
                 );
               },
             ),
-
             ListTile(
               leading: Icon(Icons.sign_language),
               title: Text('Text To Sign'),
@@ -146,7 +141,6 @@ class _TreasureState extends State<Treasure> {
                 );
               },
             ),
-
             ListTile(
               leading: Icon(Icons.share),
               title: Text('Share'),

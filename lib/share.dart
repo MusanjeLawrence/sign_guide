@@ -7,7 +7,6 @@ import 'package:sign_guide/voice_to_sign.dart';
 import 'dashboard.dart';
 import 'image_to_sign.dart';
 import 'learn.dart';
-import 'main.dart';
 
 class Share extends StatefulWidget {
   const Share({Key? key}) : super(key: key);
@@ -17,8 +16,6 @@ class Share extends StatefulWidget {
 }
 
 class _ShareState extends State<Share> {
-
-
   int _selectedIndex = 0;
 
   static const List<Widget> _widgetOptions = <Widget>[
@@ -38,10 +35,10 @@ class _ShareState extends State<Share> {
       _selectedIndex = index;
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       appBar: AppBar(
         leading: Builder(
           builder: (BuildContext context) {
@@ -52,7 +49,6 @@ class _ShareState extends State<Share> {
           },
         ),
         title: Text("Share App"),
-
       ),
       drawer: Drawer(
         child: ListView(
@@ -64,18 +60,17 @@ class _ShareState extends State<Share> {
                 color: Colors.blueAccent,
               ),
             ),
-
             ListTile(
               leading: Icon(Icons.home),
               title: Text('Home'),
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Dashboard(title: 'sign guide')),
+                  MaterialPageRoute(
+                      builder: (context) => Dashboard(title: 'sign guide')),
                 );
               },
             ),
-
             ListTile(
               leading: Icon(Icons.sign_language),
               title: Text('Text To Sign'),
@@ -146,7 +141,6 @@ class _ShareState extends State<Share> {
                 );
               },
             ),
-
             ListTile(
               leading: Icon(Icons.share),
               title: Text('Share'),

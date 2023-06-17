@@ -7,8 +7,6 @@ import 'package:sign_guide/voice_to_sign.dart';
 import 'dashboard.dart';
 import 'image_to_sign.dart';
 import 'learn.dart';
-import 'main.dart';
-
 
 class Text_to_Sign extends StatefulWidget {
   const Text_to_Sign({Key? key}) : super(key: key);
@@ -22,8 +20,6 @@ class _Text_to_SignState extends State<Text_to_Sign> {
   final _textController = TextEditingController();
   //storing the user input text into a variable
   String userInput = '';
-
-
 
   int _selectedIndex = 0;
 
@@ -48,7 +44,6 @@ class _Text_to_SignState extends State<Text_to_Sign> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       appBar: AppBar(
         leading: Builder(
           builder: (BuildContext context) {
@@ -59,7 +54,6 @@ class _Text_to_SignState extends State<Text_to_Sign> {
           },
         ),
         title: Text("Text To Sign Language"),
-
       ),
       drawer: Drawer(
         child: ListView(
@@ -71,18 +65,17 @@ class _Text_to_SignState extends State<Text_to_Sign> {
                 color: Colors.blueAccent,
               ),
             ),
-
             ListTile(
               leading: Icon(Icons.home),
               title: Text('Home'),
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Dashboard(title: 'sign guide')),
+                  MaterialPageRoute(
+                      builder: (context) => Dashboard(title: 'sign guide')),
                 );
               },
             ),
-
             ListTile(
               leading: Icon(Icons.sign_language),
               title: Text('Text To Sign'),
@@ -153,7 +146,6 @@ class _Text_to_SignState extends State<Text_to_Sign> {
                 );
               },
             ),
-
             ListTile(
               leading: Icon(Icons.share),
               title: Text('Share'),
@@ -173,36 +165,36 @@ class _Text_to_SignState extends State<Text_to_Sign> {
           crossAxisAlignment: CrossAxisAlignment.end,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-
-          //text input in the text field code
+            //text input in the text field code
             TextField(
               controller: _textController,
               decoration: InputDecoration(
-                  hintText: 'Enter Text Here',
-                  border: const OutlineInputBorder(),
-              suffixIcon: IconButton(
-                  onPressed: (){
+                hintText: 'Enter Text Here',
+                border: const OutlineInputBorder(),
+                suffixIcon: IconButton(
+                  onPressed: () {
                     //clear everything in the text field
                     _textController.clear();
                   },
                   icon: const Icon(Icons.clear),
-              ),
+                ),
               ),
             ),
 
             //translate button
             MaterialButton(
-                onPressed: (){
-                  //update string variable to get the user input\
-                  setState(() {
-                    userInput = _textController.text;
-                  });
-                },
+              onPressed: () {
+                //update string variable to get the user input\
+                setState(() {
+                  userInput = _textController.text;
+                });
+              },
               color: Colors.blueAccent,
-              child: const Text('Translate',
-              style: TextStyle(
+              child: const Text(
+                'Translate',
+                style: TextStyle(
                   color: Colors.white,
-              ),
+                ),
               ),
             ),
             //dislaying text that user typed in code
@@ -216,11 +208,9 @@ class _Text_to_SignState extends State<Text_to_Sign> {
                 ),
               ),
             ),
-
           ],
         ),
       ),
-
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(

@@ -6,7 +6,6 @@ import 'package:sign_guide/text_to_sign.dart';
 import 'package:sign_guide/treasure.dart';
 import 'package:sign_guide/voice_to_sign.dart';
 import 'image_to_sign.dart';
-import 'main.dart';
 import 'learn.dart';
 import 'dashboard.dart';
 
@@ -18,8 +17,6 @@ class Alphabets extends StatefulWidget {
 }
 
 class _AlphabetsState extends State<Alphabets> {
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,18 +41,17 @@ class _AlphabetsState extends State<Alphabets> {
                 color: Colors.blueAccent,
               ),
             ),
-
             ListTile(
               leading: Icon(Icons.home),
               title: Text('Home'),
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Dashboard(title: 'sign guide')),
+                  MaterialPageRoute(
+                      builder: (context) => Dashboard(title: 'sign guide')),
                 );
               },
             ),
-
             ListTile(
               leading: Icon(Icons.sign_language),
               title: Text('Text To Sign'),
@@ -126,7 +122,6 @@ class _AlphabetsState extends State<Alphabets> {
                 );
               },
             ),
-
             ListTile(
               leading: Icon(Icons.share),
               title: Text('Share'),
@@ -140,43 +135,39 @@ class _AlphabetsState extends State<Alphabets> {
           ],
         ),
       ),
-        body: Center(
-          child: Card(
-            child: Row(
-              children: [
-                Container(
-                  width: 160,
-                  height: 80,
-                  color: Colors.white,
-                  alignment: Alignment.center,
-                  child: Text(
-                    "A",
-                    style: TextStyle(
-                      color: Colors.blue,
-                      fontSize: 80,
-                      fontWeight: FontWeight.bold,
+      body: Center(
+        child: Card(
+          child: Row(
+            children: [
+              Container(
+                width: 160,
+                height: 80,
+                color: Colors.white,
+                alignment: Alignment.center,
+                child: Text(
+                  "A",
+                  style: TextStyle(
+                    color: Colors.blue,
+                    fontSize: 80,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              Expanded(
+                child: Container(
+                  height: 120,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage("assets/images/A.jpg"),
+                      fit: BoxFit.contain,
                     ),
                   ),
                 ),
-                Expanded(
-                  child: Container(
-                    height: 120,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage("assets/images/A.jpg"),
-                        fit: BoxFit.contain,
-                      ),
-                    ),
-                  ),
-                ),
-
-
-              ],
-            ),
-
+              ),
+            ],
           ),
-
         ),
-      );
+      ),
+    );
   }
 }

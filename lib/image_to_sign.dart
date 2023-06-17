@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:clipboard/clipboard.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:sign_guide/settings.dart';
@@ -70,11 +71,41 @@ class _Image_To_SignState extends State<Image_To_Sign> {
     }
   }
 
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+    //creating th copy floatingActionButton to take the scanned text from images
+    floatingActionButton: Row(
+      mainAxisSize: MainAxisSize.min,
+    children: [
+    FloatingActionButton(
+    heroTag: null,
+    onPressed:(){
+      FlutterClipboard.copy(outputText).then((value) {
+        SnackBar snackBar = SnackBar(content: Text("Copied To Clipboard",
+          style: TextStyle(
+            fontSize: 18,
+            color: Colors.white,
+            fontWeight: FontWeight.w700,
+          ),
+        ),
+          duration: Duration(seconds: 1),
+        );
+        ScaffoldMessenger.of(context).showSnackBar(snackBar);
+      });
+    },
+    child: Icon(Icons.copy, size: 28),
+    ),
+    SizedBox(width: 10),
+     FloatingActionButton(
+        onPressed: () {
+          pickImage(ImageSource.gallery, pickedImage);
+        },
+        child: Icon(Icons.image),
+      ),
+
+    ],
+    ),
       resizeToAvoidBottomInset : true,
       appBar: AppBar(
         leading: Builder(
@@ -211,12 +242,6 @@ class _Image_To_SignState extends State<Image_To_Sign> {
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.blueAccent,
         onTap: _onItemTapped,
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          pickImage(ImageSource.gallery, pickedImage);
-        },
-        child: Icon(Icons.image),
       ),
 
       body: SizedBox(
