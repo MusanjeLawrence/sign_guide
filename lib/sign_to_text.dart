@@ -83,7 +83,7 @@ class _Sign_To_TextState extends State<Sign_To_Text> {
             ),
             ListTile(
               leading: Icon(Icons.camera_alt_rounded),
-              title: Text('Image To Image'),
+              title: Text('Image To Text'),
               onTap: () {
                 Navigator.push(
                   context,

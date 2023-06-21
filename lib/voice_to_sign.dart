@@ -25,7 +25,6 @@ class _Voice_To_SignState extends State<Voice_To_Sign> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     _speech = stt.SpeechToText();
   }
@@ -119,7 +118,7 @@ class _Voice_To_SignState extends State<Voice_To_Sign> {
             ),
             ListTile(
               leading: Icon(Icons.camera_alt_rounded),
-              title: Text('Image To Image'),
+              title: Text('Image To Text'),
               onTap: () {
                 Navigator.push(
                   context,

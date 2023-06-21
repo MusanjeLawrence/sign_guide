@@ -88,7 +88,7 @@ class _Text_to_SignState extends State<Text_to_Sign> {
             ),
             ListTile(
               leading: Icon(Icons.camera_alt_rounded),
-              title: Text('Image To Image'),
+              title: Text('Image To Text'),
               onTap: () {
                 Navigator.push(
                   context,
@@ -199,12 +199,14 @@ class _Text_to_SignState extends State<Text_to_Sign> {
             ),
             //dislaying text that user typed in code
             Expanded(
-              child: Container(
-                child: Center(
-                  child: Text(userInput,
-                      style: TextStyle(
-                        fontSize: 35,
-                      )),
+              child: SingleChildScrollView(
+                child: Container(
+                  child: Center(
+                    child: Text(userInput,
+                        style: TextStyle(
+                          fontSize: 22,
+                        )),
+                  ),
                 ),
               ),
             ),

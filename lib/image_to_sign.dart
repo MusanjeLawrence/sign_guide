@@ -21,27 +21,6 @@ class Image_To_Sign extends StatefulWidget {
 }
 
 class _Image_To_SignState extends State<Image_To_Sign> {
-
-
-  int _selectedIndex = 0;
-
-  static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Home Page',
-    ),
-    Text(
-      'Settings Page',
-    ),
-    Text(
-      'Share Page',
-    ),
-  ];
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
   File? _pickedImage;
   String outputText = "";
 
@@ -62,7 +41,7 @@ class _Image_To_SignState extends State<Image_To_Sign> {
 
     final textRecognizer = TextRecognizer(script: TextRecognitionScript.latin);
     final RecognizedText recognizedText =
-    await textRecognizer.processImage(inputImage);
+        await textRecognizer.processImage(inputImage);
 
     for (TextBlock block in recognizedText.blocks) {
       setState(() {
@@ -74,39 +53,40 @@ class _Image_To_SignState extends State<Image_To_Sign> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    //creating th copy floatingActionButton to take the scanned text from images
-    floatingActionButton: Row(
-      mainAxisSize: MainAxisSize.min,
-    children: [
-    FloatingActionButton(
-    heroTag: null,
-    onPressed:(){
-      FlutterClipboard.copy(outputText).then((value) {
-        SnackBar snackBar = SnackBar(content: Text("Copied To Clipboard",
-          style: TextStyle(
-            fontSize: 18,
-            color: Colors.white,
-            fontWeight: FontWeight.w700,
+      //creating the copy floatingActionButton to take the scanned text from images
+      floatingActionButton: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          FloatingActionButton(
+            heroTag: null,
+            onPressed: () {
+              FlutterClipboard.copy(outputText).then((value) {
+                SnackBar snackBar = SnackBar(
+                  content: Text(
+                    "Copied To Clipboard",
+                    style: TextStyle(
+                      fontSize: 15,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                  duration: Duration(seconds: 1),
+                );
+                ScaffoldMessenger.of(context).showSnackBar(snackBar);
+              });
+            },
+            child: Icon(Icons.copy, size: 28),
           ),
-        ),
-          duration: Duration(seconds: 1),
-        );
-        ScaffoldMessenger.of(context).showSnackBar(snackBar);
-      });
-    },
-    child: Icon(Icons.copy, size: 28),
-    ),
-    SizedBox(width: 10),
-     FloatingActionButton(
-        onPressed: () {
-          pickImage(ImageSource.gallery, pickedImage);
-        },
-        child: Icon(Icons.image),
+          SizedBox(width: 10),
+          FloatingActionButton(
+            onPressed: () {
+              pickImage(ImageSource.gallery, pickedImage);
+            },
+            child: Icon(Icons.image),
+          ),
+        ],
       ),
-
-    ],
-    ),
-      resizeToAvoidBottomInset : true,
+      resizeToAvoidBottomInset: true,
       appBar: AppBar(
         leading: Builder(
           builder: (BuildContext context) {
@@ -117,7 +97,6 @@ class _Image_To_SignState extends State<Image_To_Sign> {
           },
         ),
         title: Text("Image Text To Sign Language"),
-
       ),
       drawer: Drawer(
         child: ListView(
@@ -135,11 +114,11 @@ class _Image_To_SignState extends State<Image_To_Sign> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Dashboard(title: 'sign guide')),
+                  MaterialPageRoute(
+                      builder: (context) => Dashboard(title: 'sign guide')),
                 );
               },
             ),
-
             ListTile(
               leading: Icon(Icons.sign_language),
               title: Text('Text To Sign'),
@@ -152,7 +131,7 @@ class _Image_To_SignState extends State<Image_To_Sign> {
             ),
             ListTile(
               leading: Icon(Icons.camera_alt_rounded),
-              title: Text('Image To Image'),
+              title: Text('Image To Text'),
               onTap: () {
                 Navigator.push(
                   context,
@@ -210,7 +189,6 @@ class _Image_To_SignState extends State<Image_To_Sign> {
                 );
               },
             ),
-
             ListTile(
               leading: Icon(Icons.share),
               title: Text('Share'),
@@ -224,28 +202,9 @@ class _Image_To_SignState extends State<Image_To_Sign> {
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Settings',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.share),
-            label: 'Share',
-          ),
-        ],
-        currentIndex: _selectedIndex,
-        selectedItemColor: Colors.blueAccent,
-        onTap: _onItemTapped,
-      ),
-
-      body: SizedBox(
-          height: double.infinity,
+      body: SingleChildScrollView(
+        child: SizedBox(
+          height: 2000,
           child: Column(children: [
             if (_pickedImage == null)
               Container(
@@ -255,22 +214,25 @@ class _Image_To_SignState extends State<Image_To_Sign> {
               )
             else
               SizedBox(
-                height: 300,
+                height: 350,
                 width: double.infinity,
                 child: Image.file(
                   _pickedImage!,
                   fit: BoxFit.fill,
                 ),
               ),
-            Expanded(child: Container()),
-            Text(
-              outputText,
-              style: TextStyle(fontSize: 24),
+            SizedBox(
+              height: 20,
             ),
-            Expanded(child: Container()),
+            Center(
+              child: Text(
+                outputText,
+                style: TextStyle(fontSize: 22),
+              ),
+            ),
           ]),
         ),
-
+      ),
     );
   }
 }

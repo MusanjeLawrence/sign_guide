@@ -83,7 +83,7 @@ class _ShareState extends State<Share> {
             ),
             ListTile(
               leading: Icon(Icons.camera_alt_rounded),
-              title: Text('Image To Image'),
+              title: Text('Image To Text'),
               onTap: () {
                 Navigator.push(
                   context,

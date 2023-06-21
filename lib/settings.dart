@@ -19,15 +19,9 @@ class _SettingsState extends State<Settings> {
   int _selectedIndex = 0;
 
   static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Home Page',
-    ),
-    Text(
-      'Settings Page',
-    ),
-    Text(
-      'Share Page',
-    ),
+    Dashboard(title: "Home"),
+    Settings(),
+    Share(),
   ];
 
   void _onItemTapped(int index) {
@@ -83,7 +77,7 @@ class _SettingsState extends State<Settings> {
             ),
             ListTile(
               leading: Icon(Icons.camera_alt_rounded),
-              title: Text('Image To Image'),
+              title: Text('Image To Text'),
               onTap: () {
                 Navigator.push(
                   context,
