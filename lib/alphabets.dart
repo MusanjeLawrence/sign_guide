@@ -139,841 +139,888 @@ class _AlphabetsState extends State<Alphabets> {
         child: Center(
           child: Column(
             children: [
-              Card(
-                child: Row(
-                  children: [
-                    Container(
-                      width: 160,
-                      height: 80,
-                      color: Colors.white,
-                      alignment: Alignment.center,
-                      child: Text(
-                        "A",
-                        style: TextStyle(
-                          color: Colors.blue,
-                          fontSize: 80,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Container(
-                        height: 120,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage("assets/images/A.jpg"),
-                            fit: BoxFit.contain,
+              Padding(
+                padding: const EdgeInsets.fromLTRB(14, 8, 14, 2),
+                child: Card(
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 160,
+                        height: 80,
+                        color: Colors.white,
+                        alignment: Alignment.center,
+                        child: Text(
+                          "A",
+                          style: TextStyle(
+                            color: Colors.blue,
+                            fontSize: 80,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
-                    ),
-                  ],
+                      Expanded(
+                        child: Container(
+                          height: 120,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage("assets/images/A.jpg"),
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-              Card(
-                child: Row(
-                  children: [
-                    Container(
-                      width: 160,
-                      height: 80,
-                      color: Colors.white,
-                      alignment: Alignment.center,
-                      child: Text(
-                        "B",
-                        style: TextStyle(
-                          color: Colors.blue,
-                          fontSize: 80,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Container(
-                        height: 120,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage("assets/images/B.jpg"),
-                            fit: BoxFit.contain,
+              Padding(
+                padding: const EdgeInsets.fromLTRB(14, 5, 14, 2),
+                child: Card(
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 160,
+                        height: 80,
+                        color: Colors.white,
+                        alignment: Alignment.center,
+                        child: Text(
+                          "B",
+                          style: TextStyle(
+                            color: Colors.blue,
+                            fontSize: 80,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
-                    ),
-                  ],
+                      Expanded(
+                        child: Container(
+                          height: 120,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage("assets/images/B.jpg"),
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-              Card(
-                child: Row(
-                  children: [
-                    Container(
-                      width: 160,
-                      height: 80,
-                      color: Colors.white,
-                      alignment: Alignment.center,
-                      child: Text(
-                        "C",
-                        style: TextStyle(
-                          color: Colors.blue,
-                          fontSize: 80,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Container(
-                        height: 120,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage("assets/images/C.jpg"),
-                            fit: BoxFit.contain,
+              Padding(
+                padding: const EdgeInsets.fromLTRB(14, 5, 14, 2),
+                child: Card(
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 160,
+                        height: 80,
+                        color: Colors.white,
+                        alignment: Alignment.center,
+                        child: Text(
+                          "C",
+                          style: TextStyle(
+                            color: Colors.blue,
+                            fontSize: 80,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
-                    ),
-                  ],
+                      Expanded(
+                        child: Container(
+                          height: 120,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage("assets/images/C.jpg"),
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-              Card(
-                child: Row(
-                  children: [
-                    Container(
-                      width: 160,
-                      height: 80,
-                      color: Colors.white,
-                      alignment: Alignment.center,
-                      child: Text(
-                        "D",
-                        style: TextStyle(
-                          color: Colors.blue,
-                          fontSize: 80,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Container(
-                        height: 120,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage("assets/images/D.jpg"),
-                            fit: BoxFit.contain,
+              Padding(
+                padding: const EdgeInsets.fromLTRB(14, 5, 14, 2),
+                child: Card(
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 160,
+                        height: 80,
+                        color: Colors.white,
+                        alignment: Alignment.center,
+                        child: Text(
+                          "D",
+                          style: TextStyle(
+                            color: Colors.blue,
+                            fontSize: 80,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
-                    ),
-                  ],
+                      Expanded(
+                        child: Container(
+                          height: 120,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage("assets/images/D.jpg"),
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-              Card(
-                child: Row(
-                  children: [
-                    Container(
-                      width: 160,
-                      height: 80,
-                      color: Colors.white,
-                      alignment: Alignment.center,
-                      child: Text(
-                        "E",
-                        style: TextStyle(
-                          color: Colors.blue,
-                          fontSize: 80,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Container(
-                        height: 120,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage("assets/images/E.jpg"),
-                            fit: BoxFit.contain,
+              Padding(
+                padding: const EdgeInsets.fromLTRB(14, 5, 14, 2),
+                child: Card(
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 160,
+                        height: 80,
+                        color: Colors.white,
+                        alignment: Alignment.center,
+                        child: Text(
+                          "E",
+                          style: TextStyle(
+                            color: Colors.blue,
+                            fontSize: 80,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
-                    ),
-                  ],
+                      Expanded(
+                        child: Container(
+                          height: 120,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage("assets/images/E.jpg"),
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-              Card(
-                child: Row(
-                  children: [
-                    Container(
-                      width: 160,
-                      height: 80,
-                      color: Colors.white,
-                      alignment: Alignment.center,
-                      child: Text(
-                        "F",
-                        style: TextStyle(
-                          color: Colors.blue,
-                          fontSize: 80,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Container(
-                        height: 120,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage("assets/images/F.jpg"),
-                            fit: BoxFit.contain,
+              Padding(
+                padding: const EdgeInsets.fromLTRB(14, 5, 14, 2),
+                child: Card(
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 160,
+                        height: 80,
+                        color: Colors.white,
+                        alignment: Alignment.center,
+                        child: Text(
+                          "F",
+                          style: TextStyle(
+                            color: Colors.blue,
+                            fontSize: 80,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
-                    ),
-                  ],
+                      Expanded(
+                        child: Container(
+                          height: 120,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage("assets/images/F.jpg"),
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-              Card(
-                child: Row(
-                  children: [
-                    Container(
-                      width: 160,
-                      height: 80,
-                      color: Colors.white,
-                      alignment: Alignment.center,
-                      child: Text(
-                        "F",
-                        style: TextStyle(
-                          color: Colors.blue,
-                          fontSize: 80,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Container(
-                        height: 120,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage("assets/images/F.jpg"),
-                            fit: BoxFit.contain,
+              Padding(
+                padding: const EdgeInsets.fromLTRB(14, 5, 14, 2),
+                child: Card(
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 160,
+                        height: 80,
+                        color: Colors.white,
+                        alignment: Alignment.center,
+                        child: Text(
+                          "G",
+                          style: TextStyle(
+                            color: Colors.blue,
+                            fontSize: 80,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
-                    ),
-                  ],
+                      Expanded(
+                        child: Container(
+                          height: 120,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage("assets/images/G.jpg"),
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-              Card(
-                child: Row(
-                  children: [
-                    Container(
-                      width: 160,
-                      height: 80,
-                      color: Colors.white,
-                      alignment: Alignment.center,
-                      child: Text(
-                        "G",
-                        style: TextStyle(
-                          color: Colors.blue,
-                          fontSize: 80,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Container(
-                        height: 120,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage("assets/images/G.jpg"),
-                            fit: BoxFit.contain,
+              Padding(
+                padding: const EdgeInsets.fromLTRB(14, 5, 14, 2),
+                child: Card(
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 160,
+                        height: 80,
+                        color: Colors.white,
+                        alignment: Alignment.center,
+                        child: Text(
+                          "H",
+                          style: TextStyle(
+                            color: Colors.blue,
+                            fontSize: 80,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
-                    ),
-                  ],
+                      Expanded(
+                        child: Container(
+                          height: 120,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage("assets/images/H.jpg"),
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-              Card(
-                child: Row(
-                  children: [
-                    Container(
-                      width: 160,
-                      height: 80,
-                      color: Colors.white,
-                      alignment: Alignment.center,
-                      child: Text(
-                        "H",
-                        style: TextStyle(
-                          color: Colors.blue,
-                          fontSize: 80,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Container(
-                        height: 120,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage("assets/images/H.jpg"),
-                            fit: BoxFit.contain,
+              Padding(
+                padding: const EdgeInsets.fromLTRB(14, 5, 14, 2),
+                child: Card(
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 160,
+                        height: 80,
+                        color: Colors.white,
+                        alignment: Alignment.center,
+                        child: Text(
+                          "I",
+                          style: TextStyle(
+                            color: Colors.blue,
+                            fontSize: 80,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
-                    ),
-                  ],
+                      Expanded(
+                        child: Container(
+                          height: 120,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage("assets/images/I.jpg"),
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-              Card(
-                child: Row(
-                  children: [
-                    Container(
-                      width: 160,
-                      height: 80,
-                      color: Colors.white,
-                      alignment: Alignment.center,
-                      child: Text(
-                        "I",
-                        style: TextStyle(
-                          color: Colors.blue,
-                          fontSize: 80,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Container(
-                        height: 120,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage("assets/images/I.jpg"),
-                            fit: BoxFit.contain,
+              Padding(
+                padding: const EdgeInsets.fromLTRB(14, 5, 14, 2),
+                child: Card(
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 160,
+                        height: 80,
+                        color: Colors.white,
+                        alignment: Alignment.center,
+                        child: Text(
+                          "J",
+                          style: TextStyle(
+                            color: Colors.blue,
+                            fontSize: 80,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
-                    ),
-                  ],
+                      Expanded(
+                        child: Container(
+                          height: 120,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage("assets/images/J.jpg"),
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-              Card(
-                child: Row(
-                  children: [
-                    Container(
-                      width: 160,
-                      height: 80,
-                      color: Colors.white,
-                      alignment: Alignment.center,
-                      child: Text(
-                        "J",
-                        style: TextStyle(
-                          color: Colors.blue,
-                          fontSize: 80,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Container(
-                        height: 120,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage("assets/images/J.jpg"),
-                            fit: BoxFit.contain,
+              Padding(
+                padding: const EdgeInsets.fromLTRB(14, 5, 14, 2),
+                child: Card(
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 160,
+                        height: 80,
+                        color: Colors.white,
+                        alignment: Alignment.center,
+                        child: Text(
+                          "K",
+                          style: TextStyle(
+                            color: Colors.blue,
+                            fontSize: 80,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
-                    ),
-                  ],
+                      Expanded(
+                        child: Container(
+                          height: 120,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage("assets/images/K.jpg"),
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-              Card(
-                child: Row(
-                  children: [
-                    Container(
-                      width: 160,
-                      height: 80,
-                      color: Colors.white,
-                      alignment: Alignment.center,
-                      child: Text(
-                        "K",
-                        style: TextStyle(
-                          color: Colors.blue,
-                          fontSize: 80,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Container(
-                        height: 120,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage("assets/images/K.jpg"),
-                            fit: BoxFit.contain,
+              Padding(
+                padding: const EdgeInsets.fromLTRB(14, 5, 14, 2),
+                child: Card(
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 160,
+                        height: 80,
+                        color: Colors.white,
+                        alignment: Alignment.center,
+                        child: Text(
+                          "L",
+                          style: TextStyle(
+                            color: Colors.blue,
+                            fontSize: 80,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
-                    ),
-                  ],
+                      Expanded(
+                        child: Container(
+                          height: 120,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage("assets/images/L.jpg"),
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-              Card(
-                child: Row(
-                  children: [
-                    Container(
-                      width: 160,
-                      height: 80,
-                      color: Colors.white,
-                      alignment: Alignment.center,
-                      child: Text(
-                        "L",
-                        style: TextStyle(
-                          color: Colors.blue,
-                          fontSize: 80,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Container(
-                        height: 120,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage("assets/images/L.jpg"),
-                            fit: BoxFit.contain,
+              Padding(
+                padding: const EdgeInsets.fromLTRB(14, 5, 14, 2),
+                child: Card(
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 160,
+                        height: 80,
+                        color: Colors.white,
+                        alignment: Alignment.center,
+                        child: Text(
+                          "M",
+                          style: TextStyle(
+                            color: Colors.blue,
+                            fontSize: 80,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
-                    ),
-                  ],
+                      Expanded(
+                        child: Container(
+                          height: 120,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage("assets/images/M.jpg"),
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-              Card(
-                child: Row(
-                  children: [
-                    Container(
-                      width: 160,
-                      height: 80,
-                      color: Colors.white,
-                      alignment: Alignment.center,
-                      child: Text(
-                        "M",
-                        style: TextStyle(
-                          color: Colors.blue,
-                          fontSize: 80,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Container(
-                        height: 120,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage("assets/images/M.jpg"),
-                            fit: BoxFit.contain,
+              Padding(
+                padding: const EdgeInsets.fromLTRB(14, 5, 14, 2),
+                child: Card(
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 160,
+                        height: 80,
+                        color: Colors.white,
+                        alignment: Alignment.center,
+                        child: Text(
+                          "N",
+                          style: TextStyle(
+                            color: Colors.blue,
+                            fontSize: 80,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
-                    ),
-                  ],
+                      Expanded(
+                        child: Container(
+                          height: 120,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage("assets/images/N.jpg"),
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-              Card(
-                child: Row(
-                  children: [
-                    Container(
-                      width: 160,
-                      height: 80,
-                      color: Colors.white,
-                      alignment: Alignment.center,
-                      child: Text(
-                        "N",
-                        style: TextStyle(
-                          color: Colors.blue,
-                          fontSize: 80,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Container(
-                        height: 120,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage("assets/images/N.jpg"),
-                            fit: BoxFit.contain,
+              Padding(
+                padding: const EdgeInsets.fromLTRB(14, 5, 14, 2),
+                child: Card(
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 160,
+                        height: 80,
+                        color: Colors.white,
+                        alignment: Alignment.center,
+                        child: Text(
+                          "O",
+                          style: TextStyle(
+                            color: Colors.blue,
+                            fontSize: 80,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
-                    ),
-                  ],
+                      Expanded(
+                        child: Container(
+                          height: 120,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage("assets/images/O.jpg"),
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-              Card(
-                child: Row(
-                  children: [
-                    Container(
-                      width: 160,
-                      height: 80,
-                      color: Colors.white,
-                      alignment: Alignment.center,
-                      child: Text(
-                        "O",
-                        style: TextStyle(
-                          color: Colors.blue,
-                          fontSize: 80,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Container(
-                        height: 120,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage("assets/images/O.jpg"),
-                            fit: BoxFit.contain,
+              Padding(
+                padding: const EdgeInsets.fromLTRB(14, 5, 14, 2),
+                child: Card(
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 160,
+                        height: 80,
+                        color: Colors.white,
+                        alignment: Alignment.center,
+                        child: Text(
+                          "P",
+                          style: TextStyle(
+                            color: Colors.blue,
+                            fontSize: 80,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
-                    ),
-                  ],
+                      Expanded(
+                        child: Container(
+                          height: 120,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage("assets/images/P.jpg"),
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-              Card(
-                child: Row(
-                  children: [
-                    Container(
-                      width: 160,
-                      height: 80,
-                      color: Colors.white,
-                      alignment: Alignment.center,
-                      child: Text(
-                        "P",
-                        style: TextStyle(
-                          color: Colors.blue,
-                          fontSize: 80,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Container(
-                        height: 120,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage("assets/images/P.jpg"),
-                            fit: BoxFit.contain,
+              Padding(
+                padding: const EdgeInsets.fromLTRB(14, 5, 14, 2),
+                child: Card(
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 160,
+                        height: 80,
+                        color: Colors.white,
+                        alignment: Alignment.center,
+                        child: Text(
+                          "Q",
+                          style: TextStyle(
+                            color: Colors.blue,
+                            fontSize: 80,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
-                    ),
-                  ],
+                      Expanded(
+                        child: Container(
+                          height: 120,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage("assets/images/Q.jpg"),
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-              Card(
-                child: Row(
-                  children: [
-                    Container(
-                      width: 160,
-                      height: 80,
-                      color: Colors.white,
-                      alignment: Alignment.center,
-                      child: Text(
-                        "Q",
-                        style: TextStyle(
-                          color: Colors.blue,
-                          fontSize: 80,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Container(
-                        height: 120,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage("assets/images/Q.jpg"),
-                            fit: BoxFit.contain,
+              Padding(
+                padding: const EdgeInsets.fromLTRB(14, 5, 14, 2),
+                child: Card(
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 160,
+                        height: 80,
+                        color: Colors.white,
+                        alignment: Alignment.center,
+                        child: Text(
+                          "R",
+                          style: TextStyle(
+                            color: Colors.blue,
+                            fontSize: 80,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
-                    ),
-                  ],
+                      Expanded(
+                        child: Container(
+                          height: 120,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage("assets/images/R.jpg"),
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-              Card(
-                child: Row(
-                  children: [
-                    Container(
-                      width: 160,
-                      height: 80,
-                      color: Colors.white,
-                      alignment: Alignment.center,
-                      child: Text(
-                        "R",
-                        style: TextStyle(
-                          color: Colors.blue,
-                          fontSize: 80,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Container(
-                        height: 120,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage("assets/images/R.jpg"),
-                            fit: BoxFit.contain,
+              Padding(
+                padding: const EdgeInsets.fromLTRB(14, 5, 14, 2),
+                child: Card(
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 160,
+                        height: 80,
+                        color: Colors.white,
+                        alignment: Alignment.center,
+                        child: Text(
+                          "S",
+                          style: TextStyle(
+                            color: Colors.blue,
+                            fontSize: 80,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
-                    ),
-                  ],
+                      Expanded(
+                        child: Container(
+                          height: 120,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage("assets/images/S.jpg"),
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-              Card(
-                child: Row(
-                  children: [
-                    Container(
-                      width: 160,
-                      height: 80,
-                      color: Colors.white,
-                      alignment: Alignment.center,
-                      child: Text(
-                        "S",
-                        style: TextStyle(
-                          color: Colors.blue,
-                          fontSize: 80,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Container(
-                        height: 120,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage("assets/images/S.jpg"),
-                            fit: BoxFit.contain,
+              Padding(
+                padding: const EdgeInsets.fromLTRB(14, 5, 14, 2),
+                child: Card(
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 160,
+                        height: 80,
+                        color: Colors.white,
+                        alignment: Alignment.center,
+                        child: Text(
+                          "T",
+                          style: TextStyle(
+                            color: Colors.blue,
+                            fontSize: 80,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
-                    ),
-                  ],
+                      Expanded(
+                        child: Container(
+                          height: 120,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage("assets/images/T.jpg"),
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-              Card(
-                child: Row(
-                  children: [
-                    Container(
-                      width: 160,
-                      height: 80,
-                      color: Colors.white,
-                      alignment: Alignment.center,
-                      child: Text(
-                        "T",
-                        style: TextStyle(
-                          color: Colors.blue,
-                          fontSize: 80,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Container(
-                        height: 120,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage("assets/images/T.jpg"),
-                            fit: BoxFit.contain,
+              Padding(
+                padding: const EdgeInsets.fromLTRB(14, 5, 14, 2),
+                child: Card(
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 160,
+                        height: 80,
+                        color: Colors.white,
+                        alignment: Alignment.center,
+                        child: Text(
+                          "U",
+                          style: TextStyle(
+                            color: Colors.blue,
+                            fontSize: 80,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
-                    ),
-                  ],
+                      Expanded(
+                        child: Container(
+                          height: 120,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage("assets/images/U.jpg"),
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-              Card(
-                child: Row(
-                  children: [
-                    Container(
-                      width: 160,
-                      height: 80,
-                      color: Colors.white,
-                      alignment: Alignment.center,
-                      child: Text(
-                        "U",
-                        style: TextStyle(
-                          color: Colors.blue,
-                          fontSize: 80,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Container(
-                        height: 120,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage("assets/images/U.jpg"),
-                            fit: BoxFit.contain,
+              Padding(
+                padding: const EdgeInsets.fromLTRB(14, 5, 14, 2),
+                child: Card(
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 160,
+                        height: 80,
+                        color: Colors.white,
+                        alignment: Alignment.center,
+                        child: Text(
+                          "V",
+                          style: TextStyle(
+                            color: Colors.blue,
+                            fontSize: 80,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
-                    ),
-                  ],
+                      Expanded(
+                        child: Container(
+                          height: 120,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage("assets/images/V.jpg"),
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-              Card(
-                child: Row(
-                  children: [
-                    Container(
-                      width: 160,
-                      height: 80,
-                      color: Colors.white,
-                      alignment: Alignment.center,
-                      child: Text(
-                        "V",
-                        style: TextStyle(
-                          color: Colors.blue,
-                          fontSize: 80,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Container(
-                        height: 120,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage("assets/images/V.jpg"),
-                            fit: BoxFit.contain,
+              Padding(
+                padding: const EdgeInsets.fromLTRB(14, 5, 14, 2),
+                child: Card(
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 160,
+                        height: 80,
+                        color: Colors.white,
+                        alignment: Alignment.center,
+                        child: Text(
+                          "W",
+                          style: TextStyle(
+                            color: Colors.blue,
+                            fontSize: 80,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
-                    ),
-                  ],
+                      Expanded(
+                        child: Container(
+                          height: 120,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage("assets/images/W.jpg"),
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-              Card(
-                child: Row(
-                  children: [
-                    Container(
-                      width: 160,
-                      height: 80,
-                      color: Colors.white,
-                      alignment: Alignment.center,
-                      child: Text(
-                        "W",
-                        style: TextStyle(
-                          color: Colors.blue,
-                          fontSize: 80,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Container(
-                        height: 120,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage("assets/images/W.jpg"),
-                            fit: BoxFit.contain,
+              Padding(
+                padding: const EdgeInsets.fromLTRB(14, 5, 14, 2),
+                child: Card(
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 160,
+                        height: 80,
+                        color: Colors.white,
+                        alignment: Alignment.center,
+                        child: Text(
+                          "X",
+                          style: TextStyle(
+                            color: Colors.blue,
+                            fontSize: 80,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
-                    ),
-                  ],
+                      Expanded(
+                        child: Container(
+                          height: 120,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage("assets/images/X.jpg"),
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-              Card(
-                child: Row(
-                  children: [
-                    Container(
-                      width: 160,
-                      height: 80,
-                      color: Colors.white,
-                      alignment: Alignment.center,
-                      child: Text(
-                        "X",
-                        style: TextStyle(
-                          color: Colors.blue,
-                          fontSize: 80,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Container(
-                        height: 120,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage("assets/images/X.jpg"),
-                            fit: BoxFit.contain,
+              Padding(
+                padding: const EdgeInsets.fromLTRB(14, 5, 14, 2),
+                child: Card(
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 160,
+                        height: 80,
+                        color: Colors.white,
+                        alignment: Alignment.center,
+                        child: Text(
+                          "Y",
+                          style: TextStyle(
+                            color: Colors.blue,
+                            fontSize: 80,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
-                    ),
-                  ],
+                      Expanded(
+                        child: Container(
+                          height: 120,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage("assets/images/Y.jpg"),
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-              Card(
-                child: Row(
-                  children: [
-                    Container(
-                      width: 160,
-                      height: 80,
-                      color: Colors.white,
-                      alignment: Alignment.center,
-                      child: Text(
-                        "Y",
-                        style: TextStyle(
-                          color: Colors.blue,
-                          fontSize: 80,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Container(
-                        height: 120,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage("assets/images/Y.jpg"),
-                            fit: BoxFit.contain,
+              Padding(
+                padding: const EdgeInsets.fromLTRB(14, 5, 14, 2),
+                child: Card(
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 160,
+                        height: 80,
+                        color: Colors.white,
+                        alignment: Alignment.center,
+                        child: Text(
+                          "Z",
+                          style: TextStyle(
+                            color: Colors.blue,
+                            fontSize: 80,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
-                    ),
-                  ],
-                ),
-              ),
-              Card(
-                child: Row(
-                  children: [
-                    Container(
-                      width: 160,
-                      height: 80,
-                      color: Colors.white,
-                      alignment: Alignment.center,
-                      child: Text(
-                        "Z",
-                        style: TextStyle(
-                          color: Colors.blue,
-                          fontSize: 80,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Container(
-                        height: 120,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage("assets/images/Z.jpg"),
-                            fit: BoxFit.contain,
+                      Expanded(
+                        child: Container(
+                          height: 120,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage("assets/images/Z.jpg"),
+                              fit: BoxFit.contain,
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ],
