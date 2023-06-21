@@ -135,33 +135,70 @@ class _AlphabetsState extends State<Alphabets> {
           ],
         ),
       ),
-      body: Center(
-        child: Card(
-          child: Row(
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
             children: [
-              Container(
-                width: 160,
-                height: 80,
-                color: Colors.white,
-                alignment: Alignment.center,
-                child: Text(
-                  "A",
-                  style: TextStyle(
-                    color: Colors.blue,
-                    fontSize: 80,
-                    fontWeight: FontWeight.bold,
-                  ),
+              Card(
+                child: Row(
+                  children: [
+                    Container(
+                      width: 160,
+                      height: 80,
+                      color: Colors.white,
+                      alignment: Alignment.center,
+                      child: Text(
+                        "A",
+                        style: TextStyle(
+                          color: Colors.blue,
+                          fontSize: 80,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: Container(
+                        height: 120,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: AssetImage("assets/images/A.jpg"),
+                            fit: BoxFit.contain,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
-              Expanded(
-                child: Container(
-                  height: 120,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage("assets/images/A.jpg"),
-                      fit: BoxFit.contain,
+              Card(
+                child: Row(
+                  children: [
+                    Container(
+                      width: 160,
+                      height: 80,
+                      color: Colors.white,
+                      alignment: Alignment.center,
+                      child: Text(
+                        "B",
+                        style: TextStyle(
+                          color: Colors.blue,
+                          fontSize: 80,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                     ),
-                  ),
+                    Expanded(
+                      child: Container(
+                        height: 120,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: AssetImage("assets/images/B.jpg"),
+                            fit: BoxFit.contain,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ],

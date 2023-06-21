@@ -24,15 +24,9 @@ class _Text_to_SignState extends State<Text_to_Sign> {
   int _selectedIndex = 0;
 
   static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Home Page',
-    ),
-    Text(
-      'Settings Page',
-    ),
-    Text(
-      'Share Page',
-    ),
+    Dashboard(title: 'home'),
+    Settings(),
+    Share(),
   ];
 
   void _onItemTapped(int index) {

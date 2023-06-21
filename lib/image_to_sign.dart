@@ -202,36 +202,51 @@ class _Image_To_SignState extends State<Image_To_Sign> {
           ],
         ),
       ),
-      body: SingleChildScrollView(
-        child: SizedBox(
-          height: 2000,
-          child: Column(children: [
-            if (_pickedImage == null)
-              Container(
-                height: 300,
-                color: Colors.black,
-                width: double.infinity,
-              )
-            else
-              SizedBox(
-                height: 350,
-                width: double.infinity,
-                child: Image.file(
-                  _pickedImage!,
-                  fit: BoxFit.fill,
-                ),
-              ),
-            SizedBox(
-              height: 20,
+      body: SizedBox(
+        child: Column(children: [
+          Container(
+            height: 300,
+            child: Column(
+              children: [
+                if (_pickedImage == null)
+                  Container(
+                    height: 300,
+                    color: Colors.black,
+                    width: double.infinity,
+                  )
+                else
+                  SizedBox(
+                    height: 300,
+                    width: double.infinity,
+                    child: Image.file(
+                      _pickedImage!,
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+              ],
             ),
-            Center(
-              child: Text(
-                outputText,
-                style: TextStyle(fontSize: 22),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Expanded(
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  Center(
+                    child: Padding(
+                      padding: const EdgeInsets.all(20.0),
+                      child: Text(
+                        outputText,
+                        style: TextStyle(fontSize: 22),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
-          ]),
-        ),
+          ),
+        ]),
       ),
     );
   }
