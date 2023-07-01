@@ -9,14 +9,14 @@ import 'image_to_sign.dart';
 import 'learn.dart';
 import 'dashboard.dart';
 
-class Alphabets extends StatefulWidget {
-  const Alphabets({Key? key}) : super(key: key);
+class Numbers extends StatefulWidget {
+  const Numbers({Key? key}) : super(key: key);
 
   @override
-  State<Alphabets> createState() => _AlphabetsState();
+  State<Numbers> createState() => NumbersState();
 }
 
-class _AlphabetsState extends State<Alphabets> {
+class NumbersState extends State<Numbers> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

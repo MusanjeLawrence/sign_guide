@@ -8,6 +8,7 @@ import 'package:sign_guide/voice_to_sign.dart';
 import 'alphabets.dart';
 import 'dashboard.dart';
 import 'image_to_sign.dart';
+import 'numbers.dart';
 
 class Learn extends StatefulWidget {
   const Learn({Key? key}) : super(key: key);
@@ -191,7 +192,7 @@ class _LearnState extends State<Learn> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Text_to_Sign()),
+                  MaterialPageRoute(builder: (context) => Numbers()),
                 );
               },
               child: Container(
