@@ -51,7 +51,7 @@ class _SettingsState extends State<Settings> {
             DrawerHeader(
               child: Text('Sign Guide App '),
               decoration: BoxDecoration(
-                color: Colors.blueAccent,
+                color: Colors.teal,
               ),
             ),
             ListTile(
@@ -164,7 +164,7 @@ class _SettingsState extends State<Settings> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.blueAccent,
+        selectedItemColor: Colors.teal,
         onTap: _onItemTapped,
       ),
     );

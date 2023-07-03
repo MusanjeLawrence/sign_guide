@@ -57,7 +57,7 @@ class _Sign_To_TextState extends State<Sign_To_Text> {
             DrawerHeader(
               child: Text('Sign Guide App '),
               decoration: BoxDecoration(
-                color: Colors.blueAccent,
+                color: Colors.teal,
               ),
             ),
             ListTile(
@@ -170,7 +170,7 @@ class _Sign_To_TextState extends State<Sign_To_Text> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.blueAccent,
+        selectedItemColor: Colors.teal,
         onTap: _onItemTapped,
       ),
     );

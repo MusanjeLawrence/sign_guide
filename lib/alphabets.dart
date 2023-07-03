@@ -38,7 +38,7 @@ class _AlphabetsState extends State<Alphabets> {
             DrawerHeader(
               child: Text('Sign Guide App '),
               decoration: BoxDecoration(
-                color: Colors.blueAccent,
+                color: Colors.teal,
               ),
             ),
             ListTile(
@@ -152,7 +152,7 @@ class _AlphabetsState extends State<Alphabets> {
                         child: Text(
                           "A",
                           style: TextStyle(
-                            color: Colors.blue,
+                            color: Colors.teal,
                             fontSize: 80,
                             fontWeight: FontWeight.bold,
                           ),
@@ -186,7 +186,7 @@ class _AlphabetsState extends State<Alphabets> {
                         child: Text(
                           "B",
                           style: TextStyle(
-                            color: Colors.blue,
+                            color: Colors.teal,
                             fontSize: 80,
                             fontWeight: FontWeight.bold,
                           ),
@@ -220,7 +220,7 @@ class _AlphabetsState extends State<Alphabets> {
                         child: Text(
                           "C",
                           style: TextStyle(
-                            color: Colors.blue,
+                            color: Colors.teal,
                             fontSize: 80,
                             fontWeight: FontWeight.bold,
                           ),
@@ -254,7 +254,7 @@ class _AlphabetsState extends State<Alphabets> {
                         child: Text(
                           "D",
                           style: TextStyle(
-                            color: Colors.blue,
+                            color: Colors.teal,
                             fontSize: 80,
                             fontWeight: FontWeight.bold,
                           ),
@@ -288,7 +288,7 @@ class _AlphabetsState extends State<Alphabets> {
                         child: Text(
                           "E",
                           style: TextStyle(
-                            color: Colors.blue,
+                            color: Colors.teal,
                             fontSize: 80,
                             fontWeight: FontWeight.bold,
                           ),
@@ -322,7 +322,7 @@ class _AlphabetsState extends State<Alphabets> {
                         child: Text(
                           "F",
                           style: TextStyle(
-                            color: Colors.blue,
+                            color: Colors.teal,
                             fontSize: 80,
                             fontWeight: FontWeight.bold,
                           ),
@@ -356,7 +356,7 @@ class _AlphabetsState extends State<Alphabets> {
                         child: Text(
                           "G",
                           style: TextStyle(
-                            color: Colors.blue,
+                            color: Colors.teal,
                             fontSize: 80,
                             fontWeight: FontWeight.bold,
                           ),
@@ -390,7 +390,7 @@ class _AlphabetsState extends State<Alphabets> {
                         child: Text(
                           "H",
                           style: TextStyle(
-                            color: Colors.blue,
+                            color: Colors.teal,
                             fontSize: 80,
                             fontWeight: FontWeight.bold,
                           ),
@@ -424,7 +424,7 @@ class _AlphabetsState extends State<Alphabets> {
                         child: Text(
                           "I",
                           style: TextStyle(
-                            color: Colors.blue,
+                            color: Colors.teal,
                             fontSize: 80,
                             fontWeight: FontWeight.bold,
                           ),
@@ -458,7 +458,7 @@ class _AlphabetsState extends State<Alphabets> {
                         child: Text(
                           "J",
                           style: TextStyle(
-                            color: Colors.blue,
+                            color: Colors.teal,
                             fontSize: 80,
                             fontWeight: FontWeight.bold,
                           ),
@@ -492,7 +492,7 @@ class _AlphabetsState extends State<Alphabets> {
                         child: Text(
                           "K",
                           style: TextStyle(
-                            color: Colors.blue,
+                            color: Colors.teal,
                             fontSize: 80,
                             fontWeight: FontWeight.bold,
                           ),
@@ -526,7 +526,7 @@ class _AlphabetsState extends State<Alphabets> {
                         child: Text(
                           "L",
                           style: TextStyle(
-                            color: Colors.blue,
+                            color: Colors.teal,
                             fontSize: 80,
                             fontWeight: FontWeight.bold,
                           ),
@@ -560,7 +560,7 @@ class _AlphabetsState extends State<Alphabets> {
                         child: Text(
                           "M",
                           style: TextStyle(
-                            color: Colors.blue,
+                            color: Colors.teal,
                             fontSize: 80,
                             fontWeight: FontWeight.bold,
                           ),
@@ -594,7 +594,7 @@ class _AlphabetsState extends State<Alphabets> {
                         child: Text(
                           "N",
                           style: TextStyle(
-                            color: Colors.blue,
+                            color: Colors.teal,
                             fontSize: 80,
                             fontWeight: FontWeight.bold,
                           ),
@@ -628,7 +628,7 @@ class _AlphabetsState extends State<Alphabets> {
                         child: Text(
                           "O",
                           style: TextStyle(
-                            color: Colors.blue,
+                            color: Colors.teal,
                             fontSize: 80,
                             fontWeight: FontWeight.bold,
                           ),
@@ -662,7 +662,7 @@ class _AlphabetsState extends State<Alphabets> {
                         child: Text(
                           "P",
                           style: TextStyle(
-                            color: Colors.blue,
+                            color: Colors.teal,
                             fontSize: 80,
                             fontWeight: FontWeight.bold,
                           ),
@@ -696,7 +696,7 @@ class _AlphabetsState extends State<Alphabets> {
                         child: Text(
                           "Q",
                           style: TextStyle(
-                            color: Colors.blue,
+                            color: Colors.teal,
                             fontSize: 80,
                             fontWeight: FontWeight.bold,
                           ),
@@ -730,7 +730,7 @@ class _AlphabetsState extends State<Alphabets> {
                         child: Text(
                           "R",
                           style: TextStyle(
-                            color: Colors.blue,
+                            color: Colors.teal,
                             fontSize: 80,
                             fontWeight: FontWeight.bold,
                           ),
@@ -764,7 +764,7 @@ class _AlphabetsState extends State<Alphabets> {
                         child: Text(
                           "S",
                           style: TextStyle(
-                            color: Colors.blue,
+                            color: Colors.teal,
                             fontSize: 80,
                             fontWeight: FontWeight.bold,
                           ),
@@ -798,7 +798,7 @@ class _AlphabetsState extends State<Alphabets> {
                         child: Text(
                           "T",
                           style: TextStyle(
-                            color: Colors.blue,
+                            color: Colors.teal,
                             fontSize: 80,
                             fontWeight: FontWeight.bold,
                           ),
@@ -832,7 +832,7 @@ class _AlphabetsState extends State<Alphabets> {
                         child: Text(
                           "U",
                           style: TextStyle(
-                            color: Colors.blue,
+                            color: Colors.teal,
                             fontSize: 80,
                             fontWeight: FontWeight.bold,
                           ),
@@ -866,7 +866,7 @@ class _AlphabetsState extends State<Alphabets> {
                         child: Text(
                           "V",
                           style: TextStyle(
-                            color: Colors.blue,
+                            color: Colors.teal,
                             fontSize: 80,
                             fontWeight: FontWeight.bold,
                           ),
@@ -900,7 +900,7 @@ class _AlphabetsState extends State<Alphabets> {
                         child: Text(
                           "W",
                           style: TextStyle(
-                            color: Colors.blue,
+                            color: Colors.teal,
                             fontSize: 80,
                             fontWeight: FontWeight.bold,
                           ),
@@ -934,7 +934,7 @@ class _AlphabetsState extends State<Alphabets> {
                         child: Text(
                           "X",
                           style: TextStyle(
-                            color: Colors.blue,
+                            color: Colors.teal,
                             fontSize: 80,
                             fontWeight: FontWeight.bold,
                           ),
@@ -968,7 +968,7 @@ class _AlphabetsState extends State<Alphabets> {
                         child: Text(
                           "Y",
                           style: TextStyle(
-                            color: Colors.blue,
+                            color: Colors.teal,
                             fontSize: 80,
                             fontWeight: FontWeight.bold,
                           ),
@@ -1002,7 +1002,7 @@ class _AlphabetsState extends State<Alphabets> {
                         child: Text(
                           "Z",
                           style: TextStyle(
-                            color: Colors.blue,
+                            color: Colors.teal,
                             fontSize: 80,
                             fontWeight: FontWeight.bold,
                           ),

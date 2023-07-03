@@ -59,7 +59,7 @@ class _LearnState extends State<Learn> {
             DrawerHeader(
               child: Text('Sign Guide App '),
               decoration: BoxDecoration(
-                color: Colors.blueAccent,
+                color: Colors.teal,
               ),
             ),
             ListTile(
@@ -173,7 +173,7 @@ class _LearnState extends State<Learn> {
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: Colors.lightBlueAccent,
+                  color: Colors.teal,
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -198,7 +198,7 @@ class _LearnState extends State<Learn> {
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: Colors.lightBlueAccent,
+                  color: Colors.teal,
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -222,7 +222,7 @@ class _LearnState extends State<Learn> {
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: Colors.lightBlueAccent,
+                  color: Colors.teal,
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -247,7 +247,7 @@ class _LearnState extends State<Learn> {
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: Colors.lightBlueAccent,
+                  color: Colors.teal,
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -272,7 +272,7 @@ class _LearnState extends State<Learn> {
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: Colors.lightBlueAccent,
+                  color: Colors.teal,
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -297,7 +297,7 @@ class _LearnState extends State<Learn> {
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: Colors.lightBlueAccent,
+                  color: Colors.teal,
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -322,7 +322,7 @@ class _LearnState extends State<Learn> {
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: Colors.lightBlueAccent,
+                  color: Colors.teal,
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -347,7 +347,7 @@ class _LearnState extends State<Learn> {
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: Colors.lightBlueAccent,
+                  color: Colors.teal,
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -383,7 +383,7 @@ class _LearnState extends State<Learn> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.blueAccent,
+        selectedItemColor: Colors.teal,
         onTap: _onItemTapped,
       ),
     );

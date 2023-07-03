@@ -105,7 +105,7 @@ class _Image_To_SignState extends State<Image_To_Sign> {
             DrawerHeader(
               child: Text('Sign Guide App '),
               decoration: BoxDecoration(
-                color: Colors.blueAccent,
+                color: Colors.teal,
               ),
             ),
             ListTile(

@@ -38,7 +38,7 @@ class NumbersState extends State<Numbers> {
             DrawerHeader(
               child: Text('Sign Guide'),
               decoration: BoxDecoration(
-                color: Colors.blueAccent,
+                color: Colors.tealAccent,
               ),
             ),
             ListTile(
@@ -152,7 +152,7 @@ class NumbersState extends State<Numbers> {
                         child: Text(
                           "1",
                           style: TextStyle(
-                            color: Colors.blue,
+                            color: Colors.teal,
                             fontSize: 80,
                             fontWeight: FontWeight.bold,
                           ),
@@ -186,7 +186,7 @@ class NumbersState extends State<Numbers> {
                         child: Text(
                           "2",
                           style: TextStyle(
-                            color: Colors.blue,
+                            color: Colors.teal,
                             fontSize: 80,
                             fontWeight: FontWeight.bold,
                           ),
@@ -220,7 +220,7 @@ class NumbersState extends State<Numbers> {
                         child: Text(
                           "3",
                           style: TextStyle(
-                            color: Colors.blue,
+                            color: Colors.teal,
                             fontSize: 80,
                             fontWeight: FontWeight.bold,
                           ),
@@ -231,7 +231,7 @@ class NumbersState extends State<Numbers> {
                           height: 120,
                           decoration: BoxDecoration(
                             image: DecorationImage(
-                              image: AssetImage("assets/images/4.jpg"),
+                              image: AssetImage("assets/images/3.jpg"),
                               fit: BoxFit.contain,
                             ),
                           ),
@@ -254,7 +254,7 @@ class NumbersState extends State<Numbers> {
                         child: Text(
                           "4",
                           style: TextStyle(
-                            color: Colors.blue,
+                            color: Colors.teal,
                             fontSize: 80,
                             fontWeight: FontWeight.bold,
                           ),
@@ -288,7 +288,7 @@ class NumbersState extends State<Numbers> {
                         child: Text(
                           "5",
                           style: TextStyle(
-                            color: Colors.blue,
+                            color: Colors.teal,
                             fontSize: 80,
                             fontWeight: FontWeight.bold,
                           ),
@@ -322,7 +322,7 @@ class NumbersState extends State<Numbers> {
                         child: Text(
                           "6",
                           style: TextStyle(
-                            color: Colors.blue,
+                            color: Colors.teal,
                             fontSize: 80,
                             fontWeight: FontWeight.bold,
                           ),
@@ -356,7 +356,7 @@ class NumbersState extends State<Numbers> {
                         child: Text(
                           "7",
                           style: TextStyle(
-                            color: Colors.blue,
+                            color: Colors.teal,
                             fontSize: 80,
                             fontWeight: FontWeight.bold,
                           ),
@@ -390,7 +390,7 @@ class NumbersState extends State<Numbers> {
                         child: Text(
                           "8",
                           style: TextStyle(
-                            color: Colors.blue,
+                            color: Colors.teal,
                             fontSize: 80,
                             fontWeight: FontWeight.bold,
                           ),
@@ -424,7 +424,7 @@ class NumbersState extends State<Numbers> {
                         child: Text(
                           "9",
                           style: TextStyle(
-                            color: Colors.blue,
+                            color: Colors.teal,
                             fontSize: 80,
                             fontWeight: FontWeight.bold,
                           ),
@@ -458,7 +458,7 @@ class NumbersState extends State<Numbers> {
                         child: Text(
                           "10",
                           style: TextStyle(
-                            color: Colors.blue,
+                            color: Colors.teal,
                             fontSize: 80,
                             fontWeight: FontWeight.bold,
                           ),

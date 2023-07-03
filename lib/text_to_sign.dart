@@ -56,7 +56,7 @@ class _Text_to_SignState extends State<Text_to_Sign> {
             DrawerHeader(
               child: Text('Sign Guide App '),
               decoration: BoxDecoration(
-                color: Colors.blueAccent,
+                color: Colors.teal,
               ),
             ),
             ListTile(
@@ -183,7 +183,7 @@ class _Text_to_SignState extends State<Text_to_Sign> {
                   userInput = _textController.text;
                 });
               },
-              color: Colors.blueAccent,
+              color: Colors.teal,
               child: const Text(
                 'Translate',
                 style: TextStyle(
@@ -223,7 +223,7 @@ class _Text_to_SignState extends State<Text_to_Sign> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.blueAccent,
+        selectedItemColor: Colors.teal,
         onTap: _onItemTapped,
       ),
     );

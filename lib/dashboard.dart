@@ -37,7 +37,7 @@ class _DashboardState extends State<Dashboard> {
             DrawerHeader(
               child: Text('Sign Guide App '),
               decoration: BoxDecoration(
-                color: Colors.blueAccent,
+                color: Colors.teal,
               ),
             ),
             ListTile(
@@ -137,7 +137,7 @@ class _DashboardState extends State<Dashboard> {
       body: Center(
         child: Container(
           child: Padding(
-            padding: const EdgeInsets.fromLTRB(15, 40, 10, 0),
+            padding: const EdgeInsets.fromLTRB(15, 35, 10, 0),
             child: GridView(
               children: [
                 GestureDetector(
@@ -150,7 +150,7 @@ class _DashboardState extends State<Dashboard> {
                   child: Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
-                      color: Colors.lightBlueAccent,
+                      color: Colors.teal,
                     ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -175,7 +175,7 @@ class _DashboardState extends State<Dashboard> {
                   child: Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
-                      color: Colors.lightBlueAccent,
+                      color: Colors.teal,
                     ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -200,7 +200,7 @@ class _DashboardState extends State<Dashboard> {
                   child: Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
-                      color: Colors.lightBlueAccent,
+                      color: Colors.teal,
                     ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -225,7 +225,7 @@ class _DashboardState extends State<Dashboard> {
                   child: Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
-                      color: Colors.lightBlueAccent,
+                      color: Colors.teal,
                     ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -250,7 +250,7 @@ class _DashboardState extends State<Dashboard> {
                   child: Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
-                      color: Colors.lightBlueAccent,
+                      color: Colors.teal,
                     ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -275,7 +275,7 @@ class _DashboardState extends State<Dashboard> {
                   child: Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
-                      color: Colors.lightBlueAccent,
+                      color: Colors.teal,
                     ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
