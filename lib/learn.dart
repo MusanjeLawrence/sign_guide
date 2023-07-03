@@ -59,7 +59,7 @@ class _LearnState extends State<Learn> {
             DrawerHeader(
               child: Text('Sign Guide App '),
               decoration: BoxDecoration(
-                color: Colors.teal,
+                color: Colors.blueAccent,
               ),
             ),
             ListTile(

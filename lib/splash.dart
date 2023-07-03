@@ -35,7 +35,7 @@ class _SplashState extends State<Splash> {
               style: TextStyle(
                 fontSize: 50.0,
                 fontWeight: FontWeight.bold,
-                color: Colors.teal,
+                color: Colors.lightBlueAccent,
               ),
             ),
             // SizedBox(height: 16.0),

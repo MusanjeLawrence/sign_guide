@@ -137,7 +137,7 @@ class _DashboardState extends State<Dashboard> {
       body: Center(
         child: Container(
           child: Padding(
-            padding: const EdgeInsets.fromLTRB(15, 35, 10, 0),
+            padding: const EdgeInsets.fromLTRB(15, 30, 10, 5),
             child: GridView(
               children: [
                 GestureDetector(
