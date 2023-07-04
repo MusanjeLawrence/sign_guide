@@ -5,20 +5,20 @@ import 'package:sign_guide/sign_to_text.dart';
 import 'package:sign_guide/text_to_sign.dart';
 import 'package:sign_guide/treasure.dart';
 import 'package:sign_guide/voice_to_sign.dart';
-import 'package:sign_guide/colors.dart';
 import 'alphabets.dart';
 import 'dashboard.dart';
 import 'image_to_sign.dart';
+import 'learn.dart';
 import 'numbers.dart';
 
-class Learn extends StatefulWidget {
-  const Learn({Key? key}) : super(key: key);
+class Color extends StatefulWidget {
+  const Color({Key? key}) : super(key: key);
 
   @override
-  State<Learn> createState() => _LearnState();
+  State<Color> createState() => _ColorState();
 }
 
-class _LearnState extends State<Learn> {
+class _ColorState extends State<Color> {
   int _selectedIndex = 0;
 
   static const List<Widget> _widgetOptions = <Widget>[
@@ -51,7 +51,7 @@ class _LearnState extends State<Learn> {
             );
           },
         ),
-        title: Text("Learn Sign Language"),
+        title: Text("Sign Language Colors"),
       ),
       drawer: Drawer(
         child: ListView(
@@ -174,16 +174,14 @@ class _LearnState extends State<Learn> {
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: Colors.teal,
+                  color: Colors.blue,
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(Icons.sort_by_alpha_rounded,
-                        size: 50, color: Colors.white),
                     Text(
-                      "Alphabets",
-                      style: TextStyle(color: Colors.white, fontSize: 24),
+                      "Blue",
+                      style: TextStyle(color: Colors.white, fontSize: 50),
                     ),
                   ],
                 ),
@@ -199,40 +197,14 @@ class _LearnState extends State<Learn> {
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: Colors.teal,
+                  color: Colors.red,
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(Icons.numbers_rounded, size: 50, color: Colors.white),
                     Text(
-                      "Numbers",
-                      style: TextStyle(color: Colors.white, fontSize: 24),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Color()),
-                );
-              },
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: Colors.teal,
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Icon(Icons.color_lens_rounded,
-                        size: 50, color: Colors.white),
-                    Text(
-                      "Colors",
-                      style: TextStyle(color: Colors.white, fontSize: 24),
+                      "Red",
+                      style: TextStyle(color: Colors.white, fontSize: 50),
                     ),
                   ],
                 ),
@@ -248,16 +220,14 @@ class _LearnState extends State<Learn> {
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: Colors.teal,
+                  color: Colors.green,
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(Icons.handshake_rounded,
-                        size: 50, color: Colors.white),
                     Text(
-                      "Greetings",
-                      style: TextStyle(color: Colors.white, fontSize: 24),
+                      "Green",
+                      style: TextStyle(color: Colors.white, fontSize: 50),
                     ),
                   ],
                 ),
@@ -273,16 +243,14 @@ class _LearnState extends State<Learn> {
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: Colors.teal,
+                  color: Colors.black,
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(Icons.question_mark_rounded,
-                        size: 50, color: Colors.white),
                     Text(
-                      "Questions",
-                      style: TextStyle(color: Colors.white, fontSize: 24),
+                      "Black",
+                      style: TextStyle(color: Colors.white, fontSize: 50),
                     ),
                   ],
                 ),
@@ -298,16 +266,14 @@ class _LearnState extends State<Learn> {
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: Colors.teal,
+                  color: Colors.yellow,
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(Icons.family_restroom_rounded,
-                        size: 50, color: Colors.white),
                     Text(
-                      "Family",
-                      style: TextStyle(color: Colors.white, fontSize: 24),
+                      "Yellow",
+                      style: TextStyle(color: Colors.white, fontSize: 50),
                     ),
                   ],
                 ),
@@ -323,16 +289,14 @@ class _LearnState extends State<Learn> {
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: Colors.teal,
+                  color: Colors.orange,
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(Icons.calendar_month_rounded,
-                        size: 50, color: Colors.white),
                     Text(
-                      "Calendar",
-                      style: TextStyle(color: Colors.white, fontSize: 24),
+                      "Orange",
+                      style: TextStyle(color: Colors.white, fontSize: 48),
                     ),
                   ],
                 ),
@@ -348,15 +312,38 @@ class _LearnState extends State<Learn> {
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: Colors.teal,
+                  color: Colors.pink,
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "Pink",
+                      style: TextStyle(color: Colors.white, fontSize: 50),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Text_to_Sign()),
+                );
+              },
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: Colors.purple,
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Icon(Icons.sunny, size: 50, color: Colors.white),
                     Text(
-                      "Weather",
-                      style: TextStyle(color: Colors.white, fontSize: 24),
+                      "Purple",
+                      style: TextStyle(color: Colors.white, fontSize: 50),
                     ),
                   ],
                 ),
