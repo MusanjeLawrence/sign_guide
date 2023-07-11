@@ -42,7 +42,8 @@ dependencies:
   image_picker: ^0.8.7+5
   http:
   clipboard:
-  google_mlkit_text_recognition: ^0.6.0
+  google_mlkit_text_recognition: ^0.9.0
+  ionicons: ^0.2.2
 
 dev_dependencies:
   flutter_test:
