@@ -142,15 +142,11 @@ class _SettingsState extends State<Settings> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text(
-                "Settings",
-                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-              ),
               const SizedBox(height: 40),
               SettingsTile(
                 color: Colors.blue,
-                icon: Ionicons.person_circle_outline,
-                title: "Account",
+                icon: Icons.question_mark_rounded,
+                title: "Frequently Asked Questions",
                 onTap: () {},
               ),
               const SizedBox(
@@ -158,8 +154,8 @@ class _SettingsState extends State<Settings> {
               ),
               SettingsTile(
                 color: Colors.green,
-                icon: Ionicons.pencil_outline,
-                title: "Edit Information",
+                icon: Icons.phone_android_rounded,
+                title: "Need help? Contact Us",
                 onTap: () {},
               ),
               const SizedBox(
@@ -167,7 +163,7 @@ class _SettingsState extends State<Settings> {
               ),
               SettingsTile(
                 color: Colors.black,
-                icon: Ionicons.moon_outline,
+                icon: Icons.mode_night_rounded,
                 title: "Theme",
                 onTap: () {},
               ),
@@ -176,17 +172,8 @@ class _SettingsState extends State<Settings> {
               ),
               SettingsTile(
                 color: Colors.purple,
-                icon: Ionicons.language_outline,
+                icon: Icons.language,
                 title: "Language",
-                onTap: () {},
-              ),
-              const SizedBox(
-                height: 40,
-              ),
-              SettingsTile(
-                color: Colors.red,
-                icon: Ionicons.log_out_outline,
-                title: "Logout",
                 onTap: () {},
               ),
             ],
